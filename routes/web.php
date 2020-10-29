@@ -22,9 +22,12 @@ Route::get('/logout', 'LoginController@logout');
 
 Auth::routes();
 
-Route::get('/homeAdmin', 'AdminController@home')->name('homeAdmin');
+// Route::get('/homeAdmin', 'AdminController@home')->name('homeAdmin');
 Route::get('/admAdmin', 'AdminController@dataAdmin');
+Route::get('/admin/{id}/detail', 'AdminController@detail');
 Route::get('/admPabrik', 'AdminController@dataPabrik');
 Route::get('/admPetani', 'AdminController@dataPetani');
 Route::get('/admRendemen', 'AdminController@dataRendemen');
 Route::get('/admAntrian', 'AdminController@dataAntrian');
+// Route::get('/createAdmin', 'AdminController@create')->name('admin.store');
+// Route::get('/Admin','AdminController@index');

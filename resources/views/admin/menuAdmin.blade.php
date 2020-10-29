@@ -13,25 +13,25 @@
     <title>Dashboard</title>
 
     <!-- Fontfaces CSS-->
-    <link href="CoolAdmin/asset/css/font-face.css" rel="stylesheet" media="all">
-    <link href="CoolAdmin/asset/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="CoolAdmin/asset/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="CoolAdmin/asset/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/css/font-face.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/vendor/font-awesome-4.7/css/font-awesome.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/vendor/font-awesome-5/css/fontawesome-all.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
-    <link href="CoolAdmin/asset/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/vendor/bootstrap-4.1/bootstrap.min.css')}}" rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
-    <link href="CoolAdmin/asset/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-    <link href="CoolAdmin/asset/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-    <link href="CoolAdmin/asset/vendor/wow/animate.css" rel="stylesheet" media="all">
-    <link href="CoolAdmin/asset/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="CoolAdmin/asset/vendor/slick/slick.css" rel="stylesheet" media="all">
-    <link href="CoolAdmin/asset/vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="CoolAdmin/asset/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/vendor/wow/animate.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/vendor/css-hamburgers/hamburgers.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/vendor/slick/slick.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/vendor/perfect-scrollbar/perfect-scrollbar.css')}}" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="CoolAdmin/asset/css/theme.css" rel="stylesheet" media="all">
+    <link href="{{asset('CoolAdmin/asset/css/theme.css')}}" rel="stylesheet" media="all">
 
 </head>
 
@@ -41,7 +41,7 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="CoolAdmin/asset/images/icon/logo.png" alt="Cool Admin" />
+                    <img src="{{asset('CoolAdmin/asset/images/icon/logo.png')}}" alt="Cool Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -321,42 +321,43 @@
             </header>
             <!-- HEADER DESKTOP-->
             @yield('dataAdmin')
+            @yield('detailAdmin')
             @yield('dataPabrik')
-            @yield('dataPetani')
-        <div class="row">
+            @yield('dataPetani')   
+        <!-- <div class="row">
             <div class="col-md-12">
                 <div class="copyright">
                     <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
                 </div>
             </div>
-        </div>    
+        </div> -->
+           
         </div>
-        
     </div>
 
     <!-- Jquery JS-->
-    <script src="CoolAdmin/asset/vendor/jquery-3.2.1.min.js"></script>
+    <script src="{{asset('CoolAdmin/asset/vendor/jquery-3.2.1.min.js')}}"></script>
     <!-- Bootstrap JS-->
-    <script src="CoolAdmin/asset/vendor/bootstrap-4.1/popper.min.js"></script>
-    <script src="CoolAdmin/asset/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <script src="{{asset('CoolAdmin/asset/vendor/bootstrap-4.1/popper.min.js')}}"></script>
+    <script src="{{asset('CoolAdmin/asset/vendor/bootstrap-4.1/bootstrap.min.js')}}"></script>
     <!-- Vendor JS       -->
-    <script src="CoolAdmin/asset/vendor/slick/slick.min.js">
+    <script src="{{asset('CoolAdmin/asset/vendor/slick/slick.min.js')}}">
     </script>
-    <script src="CoolAdmin/asset/vendor/wow/wow.min.js"></script>
-    <script src="CoolAdmin/asset/vendor/animsition/animsition.min.js"></script>
-    <script src="CoolAdmin/asset/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    <script src="{{asset('CoolAdmin/asset/vendor/wow/wow.min.js')}}"></script>
+    <script src="{{asset('CoolAdmin/asset/vendor/animsition/animsition.min.js')}}"></script>
+    <script src="{{asset('CoolAdmin/asset/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js')}}">
     </script>
-    <script src="CoolAdmin/asset/vendor/counter-up/jquery.waypoints.min.js"></script>
-    <script src="CoolAdmin/asset/vendor/counter-up/jquery.counterup.min.js">
+    <script src="{{asset('CoolAdmin/asset/vendor/counter-up/jquery.waypoints.min.js')}}"></script>
+    <script src="{{asset('CoolAdmin/asset/vendor/counter-up/jquery.counterup.min.js')}}">
     </script>
-    <script src="CoolAdmin/asset/vendor/circle-progress/circle-progress.min.js"></script>
-    <script src="CoolAdmin/asset/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="CoolAdmin/asset/vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="CoolAdmin/asset/vendor/select2/select2.min.js">
+    <script src="{{asset('CoolAdmin/asset/vendor/circle-progress/circle-progress.min.js')}}"></script>
+    <script src="{{asset('CoolAdmin/asset/vendor/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
+    <script src="{{asset('CoolAdmin/asset/vendor/chartjs/Chart.bundle.min.js')}}"></script>
+    <script src="{{asset('CoolAdmin/asset/vendor/select2/select2.min.js')}}">
     </script>
 
     <!-- Main JS-->
-    <script src="CoolAdmin/asset/js/main.js"></script>
+    <script src="{{asset('CoolAdmin/asset/js/main.js')}}"></script>
 
 </body>
 </html>

@@ -16,9 +16,11 @@ class CreatePabrikTable extends Migration
         Schema::create('pabrik', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama');
-            $table->string('email');
+            $table->string('no_hp');
             $table->string('alamat');
+            $table->string('email');
             $table->string('password');
+            $table->enum('status',['aktif','tidak aktif']);
             $table->timestamps();
         });
     }

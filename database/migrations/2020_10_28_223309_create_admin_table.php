@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePetaniTable extends Migration
+class CreateAdminTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreatePetaniTable extends Migration
      */
     public function up()
     {
-        Schema::create('petani', function (Blueprint $table) {
+        Schema::create('admin', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama');
             $table->string('no_hp');
-            $table->string('alamat');
-            $table->string('alamat_lahan');
             $table->string('email');
             $table->string('password');
+            $table->enum('status',['aktif','tidak aktif']);
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreatePetaniTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('petani');
+        Schema::dropIfExists('admin');
     }
 }
