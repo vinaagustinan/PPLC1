@@ -15,10 +15,14 @@ Route::get('/', 'LandingController@home');
 Route::get('/about', 'LandingController@about');
 Route::get('/contact', 'LandingController@contact');
 // login
-Route::get('/loginPage', 'LoginController@login');
+Route::get('/loginPage', 'LoginController@login')->middleware('admin');
 Route::post('/postLogin', 'LoginController@postLogin')->name('postLogin');
 Route::get('/logout', 'LoginController@logout');
-// 
+// register
+Route::get('/registerPetani', 'RegisterController@registerPetani');
+Route::get('/registerPabrik', 'RegisterController@registerPabrik');
+Route::post('/doRegisterPetani', 'RegisterController@doRegisterPetani')->name('doRegisterPetani');
+Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('doRegisterPabrik');
 
 Auth::routes();
 

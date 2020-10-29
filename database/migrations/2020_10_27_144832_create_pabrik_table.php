@@ -15,12 +15,12 @@ class CreatePabrikTable extends Migration
     {
         Schema::create('pabrik', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama');
+            $table->unsignedBigInteger('user_id');
+            $table->string('nama_pabrik');
             $table->string('no_hp');
             $table->string('alamat');
-            $table->string('email');
-            $table->string('password');
-            $table->enum('status',['aktif','tidak aktif']);
+            $table->string('status');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

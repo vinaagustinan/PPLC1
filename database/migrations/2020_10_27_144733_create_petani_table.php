@@ -15,12 +15,14 @@ class CreatePetaniTable extends Migration
     {
         Schema::create('petani', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('user_id')->unsigned()->nullable()->index();
             $table->string('nama');
             $table->string('no_hp');
-            $table->string('alamat');
+            $table->string('no_ktp');
             $table->string('alamat_lahan');
-            $table->string('email');
-            $table->string('password');
+            $table->string('luas_lahan');
+            $table->string('status');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
