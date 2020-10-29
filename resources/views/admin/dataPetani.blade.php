@@ -1,4 +1,4 @@
-@extends('admin.menuAdmin')
+@extends('admin.menu')
 @section('dataPetani')
 <!-- DATA TABLE-->
 <section class="p-t-20">
@@ -38,10 +38,10 @@
                             </select>
                             <div class="dropDownSelect2"></div>
                         </div>
-                    </div> -->
-                </div>
+                    </div>
+                </div> -->
                 <div class="table-responsive table-responsive-data2">
-                    <table class="table table-data2">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <!-- <th>
@@ -52,8 +52,8 @@
                                 </th> -->
                                 <th>Nama</th>
                                 <th>No HP</th>
-                                <th>Alamat</th>
-                                <th>Alamat Lahan</th>
+                                <!-- <th>Alamat</th> -->
+                                <!-- <th>Alamat Lahan</th> -->
                                 <th>Email</th>
                                 <th>Status</th>
                                 <!-- <th>date</th>
@@ -67,8 +67,8 @@
                             <tr>
                                 <td>{{$petani->nama}}</td>
                                 <td>{{$petani->no_hp}}</td>
-                                <td>{{$petani->alamat}}</td>
-                                <td>{{$petani->alamat_lahan}}</td>
+                                <!-- <td>{{$petani->alamat}}</td> -->
+                                <!-- <td>{{$petani->alamat_lahan}}</td> -->
                                 <td>{{$petani->email}}</td>
                                 <td>{{$petani->status}}</td>
                                 <td>
@@ -76,14 +76,16 @@
                                         <!-- <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
                                             <i class="zmdi zmdi-mail-send"></i>
                                         </button> -->
-                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                            <a href="/admin/{{$petani->id}}/edit"><i class="zmdi zmdi-edit"></i>
-                                        </button>
+                                        <a href="/admPetani/{{$petani->id}}/edit">
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                        </a>
                                         <!-- <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button> -->
-                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
-                                            <a href="/admin/{{$petani->id}}/detail"><i class="zmdi zmdi-more"></i><a>
+                                        <!-- <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
+                                            <a href="/admPetani/{{$petani->id}}/detail"><i class="zmdi zmdi-more"></i><a> -->
                                         </button>
                                     </div>
                                 </td>

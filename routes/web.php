@@ -26,11 +26,18 @@ Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('d
 
 Auth::routes();
 
-// Route::get('/homeAdmin', 'AdminController@home')->name('homeAdmin');
+Route::get('/notifikasi','AdminController@notif');
+Route::get('/akun', 'AdminController@akun');
+
+Route::get('/homeAdmin', 'AdminController@home')->name('homeAdmin');
 Route::get('/admAdmin', 'AdminController@dataAdmin');
-Route::get('/admin/{id}/detail', 'AdminController@detail');
+Route::get('/admAdmin/{id}/detail', 'AdminController@detailAdmin');
 Route::get('/admPabrik', 'AdminController@dataPabrik');
+Route::get('/admPabrik/{id}/edit', 'AdminController@editPabrik');
+Route::post('/admPabrik/{id}/update', 'AdminController@updatePabrik');
 Route::get('/admPetani', 'AdminController@dataPetani');
+Route::get('/admPetani/{id}/edit', 'AdminController@editPetani');
+Route::post('/admPetani/{id}/update', 'AdminController@updatePetani');
 Route::get('/admRendemen', 'AdminController@dataRendemen');
 Route::get('/admAntrian', 'AdminController@dataAntrian');
 // Route::get('/createAdmin', 'AdminController@create')->name('admin.store');

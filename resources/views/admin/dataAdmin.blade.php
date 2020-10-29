@@ -1,4 +1,4 @@
-@extends('admin.menuAdmin')
+@extends('admin.menu')
 @section('dataAdmin')
 <!-- DATA TABLE-->
 <section class="p-t-20">
@@ -41,7 +41,7 @@
                     </div> -->
                 <!-- </div> -->
                 <div class="table-responsive table-responsive-data2">
-                    <table class="table table-data2">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <!-- <th>
@@ -54,10 +54,6 @@
                                 <th>No HP</th>
                                 <th>Email</th>
                                 <th>Status</th>
-                                <!-- <th>date</th>
-                                <th>status</th>
-                                <th>price</th>
-                                <th></th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -79,9 +75,11 @@
                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button> -->
-                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Detail" href="/detail">
-                                            <a href="/admin/{{$admin->id}}/detail"><i class="zmdi zmdi-more"></i><a>
-                                        </button>
+                                        <a href="/admAdmin/{{$admin->id}}/detail">
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Detail" href="/detail">
+                                                <i class="zmdi zmdi-more"></i>
+                                            </button>
+                                        </a>
                                     </div>
                                 </td>
                             </tr>

@@ -1,4 +1,4 @@
-@extends('admin.menuAdmin')
+@extends('admin.menu')
 @section('dataPabrik')
 <!-- DATA TABLE-->
 <section class="p-t-20">
@@ -38,10 +38,10 @@
                             </select>
                             <div class="dropDownSelect2"></div>
                         </div>
-                    </div> -->
-                </div>
+                    </div> 
+                </div>-->
                 <div class="table-responsive table-responsive-data2">
-                    <table class="table table-data2">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <!-- <th>
@@ -51,9 +51,9 @@
                                     </label>
                                 </th> -->
                                 <th>Nama Pabrik</th>
-                                <th>No HP</th>
                                 <th>Alamat</th>
-                                <th>Email</th>
+                                <th>No HP</th>
+                                <!-- <th>Email</th> -->
                                 <th>Status</th>
                                 <!-- <th>date</th>
                                 <th>status</th>
@@ -65,24 +65,26 @@
                         @foreach($data_pabrik as $pabrik)
                             <tr>
                                 <td>{{$pabrik->nama}}</td>
-                                <td>{{$pabrik->no_hp}}</td>
                                 <td>{{$pabrik->alamat}}</td>
-                                <td>{{$pabrik->email}}</td>
+                                <td>{{$pabrik->no_hp}}</td>
+                                <!-- <td>{{$pabrik->email}}</td> -->
                                 <td>{{$pabrik->status}}</td>
                                 <td>
                                     <div class="table-data-feature">
                                         <!-- <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
                                             <i class="zmdi zmdi-mail-send"></i>
                                         </button> -->
-                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                            <a href="/admin/{{$pabrik->id}}/edit"><i class="zmdi zmdi-edit"></i>
-                                        </button>
+                                        <a href="/admPabrik/{{$pabrik->id}}/edit">
+                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                        </a>
                                         <!-- <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button> -->
-                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
-                                            <a href="/admin/{{$pabrik->id}}/detail"><i class="zmdi zmdi-more"></i><a>
-                                        </button>
+                                        <!-- <button class="item" data-toggle="tooltip" data-placement="top" title="Detail">
+                                            <a href="/admPabrik/{{$pabrik->id}}/detail"><i class="zmdi zmdi-more"></i><a>
+                                        </button> -->
                                     </div>
                                 </td>
                             </tr>

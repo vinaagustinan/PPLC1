@@ -6,29 +6,44 @@ use Illuminate\Http\Request;
 use App\Admin;
 
 class AdminController extends Controller{
-    // public function home(){
-    //   return view('admin.dashboard');
-    // }
+    public function home(){
+      return view('admin.home');
+    }
     public function dataAdmin(){
         $data_admin = \App\Admin::all(); //mengambil semua data pada database
         return view('admin.dataAdmin',['data_admin'=> $data_admin]);
     }
-    public function detail(){
-        return view('admin.detailAdmin');
+    public function detailAdmin($id){
+        $data_admin = \App\Admin::find($id); 
+        return view('admin.detailAdmin',['data_admin'=> $data_admin]);
     }
     public function dataPabrik(){
         $data_pabrik = \App\Pabrik::all(); //mengambil semua data pada database
         return view('admin.dataPabrik',['data_pabrik'=> $data_pabrik]);
     }
+    public function editPabrik($id){
+        $data_pabrik = \App\Pabrik::find($id); 
+        return view('admin.detailPabrik',['data_pabrik'=> $data_pabrik]);
+    }
     public function dataPetani(){
         $data_petani = \App\Petani::all(); //mengambil semua data pada database
         return view('admin.dataPetani',['data_petani'=> $data_petani]);
+    }
+    public function editPetani($id){
+        $data_petani = \App\Petani::find($id); 
+        return view('admin.detailPetani',['data_petani'=> $data_petani]);
     }
     public function dataRendemen(){
         return view('admin.dataRendemen');
     }
     public function dataAntrian(){
         return view('admin.dataAntrian');
+    }
+    public function notif(){
+        return view('admin.notifikasi');
+    }
+    public function akun(){
+        return view('admin.akun');
     }
     /**
      * Display a listing of the resource.
