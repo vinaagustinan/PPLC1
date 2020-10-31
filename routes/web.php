@@ -23,7 +23,7 @@ Route::get('/registerPetani', 'RegisterController@registerPetani');
 Route::get('/registerPabrik', 'RegisterController@registerPabrik');
 Route::post('/doRegisterPetani', 'RegisterController@doRegisterPetani')->name('doRegisterPetani');
 Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('doRegisterPabrik');
-
+//
 Auth::routes();
 
 Route::get('/notifikasi','AdminController@notif');
