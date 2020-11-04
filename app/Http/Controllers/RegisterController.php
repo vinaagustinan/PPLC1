@@ -50,7 +50,7 @@ class RegisterController extends Controller{
 
     $petani->save(); // save petani
 
-    return redirect()->back()->with('success','Berhasil Melakukan Pendaftaran Petani');
+    return redirect('/loginPage')->with('Sukses','Pendaftaran Akun Berhasil');
   }
 
   public function doRegisterPabrik(Request $request)
@@ -80,7 +80,7 @@ class RegisterController extends Controller{
 
     $pabrik->save(); // save petani
 
-    return redirect()->back()->with('success','Berhasil Melakukan Pendaftaran Pabrik');
+    return redirect("/loginPage")->with('Sukses','Pendaftaran Akun Berhasil');
   }
 
   // public function homeAdmin(){

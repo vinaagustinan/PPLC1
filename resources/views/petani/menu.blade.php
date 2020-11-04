@@ -20,9 +20,6 @@
 
     <!-- Bootstrap CSS-->
     <link href="{{asset('CoolAdmin/asset/vendor/bootstrap-4.1/bootstrap.min.css')}}" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Vendor CSS-->
     <link href="{{asset('CoolAdmin/asset/vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
@@ -55,24 +52,12 @@
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="/admAdmin">
-                                <i class="fas fa-copy"></i>Data Admin</a>
+                            <a href="/pabrikRendemen">
+                                <i class="fas fa-copy"></i>Data Rendemen</a>
                         </li>
                         <li>
-                            <a href="/admPabrik">
-                                <i class="fas fa-copy"></i>Data Pabrik Gula</a>
-                        </li>
-                        <li>
-                            <a href="/admPetani">
-                                <i class="fas fa-copy"></i>Data Petani</a>
-                        </li>
-                        <li>
-                            <a href="/admRendemen">
-                                <i class="fas fa-table"></i>Data Rendemen</a>
-                        </li>
-                        <li>
-                            <a href="/admAntrian">
-                                <i class="fas fa-calendar-alt"></i>Data Antrian</a>
+                            <a href="/pabrikAntrian">
+                                <i class="fas fa-copy"></i>Data Antrian</a>
                         </li>
                     </ul>
                 </nav>
@@ -89,47 +74,28 @@
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
                             </form>
-                            <div class="noti-wrap">
-                                <div class="account-item js-item-menu">
-                                    <div class="content">
-                                        <a href="">
-                                            <div class="fa fa-bell fa-lg" aria-hidden="true">
-                                                <i class="js-acc-btn" href="#"></i>
-                                            </div>
-                                        </a>
+                            <div class="header-button">
+                                <!-- <div class="noti-wrap">
+                                    <div class="noti__item js-item-menu">
+                                        <a href="/notifikasi">
+                                            <i class="zmdi zmdi-notifications"></i></a>
                                     </div>
-                                    <div class="noti-dropdown js-dropdown">
-                                        <div class="noti-dropdown__body">
-                                            <div class="noti-dropdown__item">
-                                                <a href="/notifPabrik">
-                                                    <i class="fas fa-address-book"></i>Pengajuan Akun Pabrik Gula</a>
-                                            </div>
-                                            <div class="noti-dropdown__footer">
-                                                <a href="/notifPetani">
-                                                    <i class="far fa-address-book"></i>Pengajuan Akun Petani</a>
-                                            </div>
+                                </div> -->
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#"></a>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="account-wrap">
-                                <div class="account-item clearfix js-item-menu">
-                                    <div class="content">
-                                        <a href="">
-                                            <div class="fa fa-user fa-lg" aria-hidden="true">
-                                                <i class="js-acc-btn" href="#"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="account-dropdown js-dropdown">
-                                        <div class="account-dropdown__body">
-                                            <div class="account-dropdown__item">
-                                                <a href="/akunAdmin">
-                                                    <i class="zmdi zmdi-account"></i>My Profile</a>
-                                            </div>
-                                            <div class="account-dropdown__footer">
-                                                <a href="/">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="/akun">
+                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                </div>
+                                                <div class="account-dropdown__footer">
+                                                    <a href="/">
+                                                        <i class="zmdi zmdi-power"></i>Logout</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -137,19 +103,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </header>
-            <!-- HEADER DESKTOP-->
-            @yield('notifPabrik')
-            @yield('notifPetani')
+                </header>
+                <!-- HEADER DESKTOP-->
             @yield('akun')
             @yield('home')
-            @yield('dataAdmin')
-            @yield('detailAdmin')
-            @yield('dataPabrik')
-            @yield('detailPabrik')
-            @yield('dataPetani')   
-            @yield('detailPetani')
+            @yield('dataRendemen')
+            @yield('dataAntrian')
         <!-- <div class="row">
             <div class="col-md-12">
                 <div class="copyright">

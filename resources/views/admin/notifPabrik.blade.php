@@ -1,11 +1,10 @@
 @extends('admin.menu')
-@section('dataPabrik')
-<!-- DATA TABLE-->
+@section('notifPabrik')
 <section class="p-t-20">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="title-5 m-b-35">Data Pabrik</h3>
+                <h3 class="title-5 m-b-35">Data Pengajuan Akun Pabrik</h3>
                 <div class="table-data__tool">
                     <!-- <div class="table-data__tool-right">
                         <button class="au-btn au-btn-icon au-btn--green au-btn--small">
@@ -57,5 +56,4 @@
         </div>
     </div>
 </section>
-<!-- END DATA TABLE-->
 @endsection

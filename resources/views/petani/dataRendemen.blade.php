@@ -1,35 +1,28 @@
 @extends('admin.menu')
-@section('dataPetani')
+@section('dataRendemen')
 <!-- DATA TABLE-->
 <section class="p-t-20">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="title-5 m-b-35">Data Petani</h3>
-                <div class="table-data__tool">
-                    <!-- <div class="table-data__tool-right">
-                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                            <i class="zmdi zmdi-plus"></i>add item</button>
-                    </div> -->
-                </div>
+                <h3 class="title-5 m-b-35">Data Rendemen</h3>
                 <div class="table-responsive table-responsive-data2">
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <!-- <th>No KTP</th> -->
-                                <th>Nama</th>
-                                <th>No HP</th>
-                                <!-- <th>Alamat</th> -->
-                                <!-- <th>Alamat Lahan</th> -->
-                                <!-- <th>Luas Lahan</th> -->
-                                <th>Status</th>
+                                <th>NoPol Truk</th>
+                                <th>Tanggal</th>
+                                <th>Nilai Rendemen</th>
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($data_petani as $petani)
-                            <tr class="tr-shadow">
-                                <td>{{$petani->nama}}</td>
-                                <td>{{$petani->no_hp}}</td>
+                        @foreach($data_rendemen as $rendemen)
+                            <tr>
+                                <td>{{$rendemen->nama}}</td>
+                                <td>{{$rendemen->no_hp}}</td>
+                                <!-- <td>{{$petani->alamat}}</td> -->
+                                <!-- <td>{{$petani->alamat_lahan}}</td> -->
+                                <td>{{$petani->email}}</td>
                                 <td>{{$petani->status}}</td>
                                 <td>
                                     <div class="table-data-feature">

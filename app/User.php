@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email', 'password', 'Aktor',
+        'nama', 'email', 'password', 'aktor',
     ];
 
     /**
@@ -36,11 +36,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    protected $table = 'users';
-
-    public function petani()
-    {
-        return $this->hasOne('App\Petani');
-    }
 }

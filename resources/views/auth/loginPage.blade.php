@@ -8,6 +8,7 @@
 	<!-- Font-->
 	<link rel="stylesheet" type="text/css" href="{{asset('login/assets/css/roboto-font.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('login/assets/fonts/line-awesome/css/line-awesome.min.css')}}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<!-- Jquery -->
 	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
 	<!-- Main Style Css -->
@@ -26,6 +27,13 @@
 				</div> -->
 			</div>
 			<form class="form-detail" action="{{route('postLogin')}}" method="POST" id="login">
+				@if (\Session::has('error'))
+					<div class="alert alert-danger">
+						<ul>
+							<li>{!! \Session::get('error') !!}</li>
+						</ul>
+					</div>
+				@endif
 				<h2>Login Form</h2>
 				{{csrf_field()}}
 				<div class="form-row">

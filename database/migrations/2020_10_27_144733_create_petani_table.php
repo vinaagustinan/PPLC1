@@ -21,7 +21,7 @@ class CreatePetaniTable extends Migration
             $table->string('no_ktp');
             $table->string('alamat_lahan');
             $table->string('luas_lahan');
-            $table->string('status');
+            $table->string('status')->default($value);
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

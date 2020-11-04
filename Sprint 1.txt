@@ -1,17 +1,20 @@
 Landing Page
 Menu : Home, About Us, Contact (v)
-Button : Login, Register
+Button : Login (v)
+         Register -dropdown
 
 Halaman Register -> drop down Petani dan Pabrik
 
 Halaman Admin:
-Profil (+Logout)
+login
+Profil
+Logout (v)
 Data Admin (v)
-Detail Data Admin
+Detail Data Admin (v) -simpan
 Data Pabrik Gula (v)
-Mengubah Status Data PG
+Mengubah Status Data PG -simpan
 Data Petani (v)
-Megubah stastus Dat Petani
+Megubah status Data Petani -simpan
 Data Rendemen (v)
 Data Antrian (v)
 Notifikasi Verifikasi
@@ -21,11 +24,13 @@ Nampilin Data User
 Button Terima, Tolak
 
 Halaman Pabrik Gula:
-Profil (+logout) - ubah password
-Data Rendemen
-Data Antrian
+Profil - ubah password
+logout (v)
+Data Rendemen (v)
+Data Antrian (v)
 
 Halaman Petani :
-Profil (+logout)
-Data Rendemen - ubah password
-Data Antrian
+Profil - ubah password
+logout (v)
+Data Rendemen (v)
+Data Antrian (v)

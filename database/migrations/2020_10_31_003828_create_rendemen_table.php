@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePabrikTable extends Migration
+class CreateRendemenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreatePabrikTable extends Migration
      */
     public function up()
     {
-        Schema::create('pabrik', function (Blueprint $table) {
+        Schema::create('rendemen', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
-            $table->string('nama_pabrik');
-            $table->string('no_hp');
-            $table->string('alamat');
-            $table->string('status')->default($value);
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('tanggal');
+            $table->
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ class CreatePabrikTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pabrik');
+        Schema::dropIfExists('rendemen');
     }
 }
