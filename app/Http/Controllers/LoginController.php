@@ -23,7 +23,13 @@ class LoginController extends Controller{
           return redirect('/homeAdmin');
       }
     }
-  }
+  
+  
+    else {
+          return redirect('/loginPage')->with('error','Data yang anda masukkan tidak sesuai');
+      }
+  }  
+  
   public function logout(){
     Auth::logout();
     return redirect('/');

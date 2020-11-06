@@ -48,7 +48,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="/homeAdmin">
+                            <a class="js-arrow" href="/homePabrik>
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
@@ -83,15 +83,24 @@
                                 </div> -->
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
-                                        <div class="content">
-                                            <a class="js-acc-btn" href="#"></a>
-                                        </div>
+                                    <div class="content">
+                                        <a href="">
+                                            <div class="fa fa-user fa-lg" aria-hidden="true">
+                                                <i class="js-acc-btn" href="#"></i>
+                                            </div>
+                                        </a>
+                                    </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
                                                     <a href="/akun">
                                                         <i class="zmdi zmdi-account"></i>Account</a>
                                                 </div>
+                                            </div>
+                                            <div class="account-dropdown__item">
+                                                <a href="{{route('password.change')}}">
+                                                    <i class="fas fa-cog"></i>Ubah Password</a>
+                                            </div>
                                                 <div class="account-dropdown__footer">
                                                     <a href="/">
                                                         <i class="zmdi zmdi-power"></i>Logout</a>

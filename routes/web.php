@@ -51,9 +51,10 @@ Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('d
     //halaman pabrik
     Route::get('/homePabrik', 'PabrikController@home')->name('homePabrik');
     Route::get('/akunAdmin/{{$admin->id}}', 'PabrikController@akun');
-    Route::get('/ubahpw', 'PabrikController@ubahpw');
     Route::get('/pabrikRendemen', 'PaController@dataRendemen');
-    Route::get('/admAntrian', 'PabrikController@dataAntrian');
+    Route::get('/admAntrian', 'PabrikController@dataAntrian');  
+    Route::get('password', 'PabrikController@change')->name('password.change');
+    Route::put('password', 'PabrikController@updatepass')->name('password.update');
 // });
 
 // Route::group(['middleware' => ['auth','CekAktor:petani']],function(){
@@ -62,4 +63,6 @@ Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('d
     Route::get('/akun', 'PetaniController@akun');
     Route::get('/petaniRendemen', 'PetaniController@dataRendemen');
     Route::get('/admAntrian', 'PetaniController@dataAntrian');  
+    Route::get('password', 'PetaniController@change')->name('password.change');
+    Route::put('password', 'PetaniController@updatepass')->name('password.update');
 // });

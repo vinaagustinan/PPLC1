@@ -1,1 +1,1 @@
-@extends('pabrik.menu')
+@extends('petani.menu')
