@@ -51,7 +51,18 @@ Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('d
     //halaman pabrik
     Route::get('/homePabrik', 'PabrikController@home')->name('homePabrik');
     Route::get('/akunAdmin/{{$admin->id}}', 'PabrikController@akun');
-    Route::get('/pabrikRendemen', 'PaController@dataRendemen');
+    //data Rendemen
+    Route::get('/pabrikRendemen', 'RendemenController@dataRendemen');
+    Route::get('/tambahRendemen', 'RendemenController@tambahdataRendemen');
+    Route::post('/tambahRendemen/createRendemen', 'RendemenController@create');
+    Route::get('/pabrikRendemen/{id}/edit', 'RendemenController@editdataRendemen');
+    Route::post('/pabrikRendemen/{id}/update', 'RendemenController@updatedataRendemen');
+    Route::get('/rincianrendemen/{id}/rincian', 'RendemenController@rinciandataRendemen');
+    // Route::get('/rincianRendemen', 'RendemenController@rincianRendemen');
+    // Route::post('/rincianRendemen/{id}', 'AdminController@rincianRendemen');
+
+
+
     Route::get('/admAntrian', 'PabrikController@dataAntrian');  
     Route::get('password', 'PabrikController@change')->name('password.change');
     Route::put('password', 'PabrikController@updatepass')->name('password.update');

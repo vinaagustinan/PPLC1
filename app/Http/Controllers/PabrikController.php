@@ -67,4 +67,5 @@ class PabrikController extends Controller{
           ->route('password.change')
           ->withSuccess('Password berhasil diganti.');
   }
+  
 }

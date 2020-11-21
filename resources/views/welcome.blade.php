@@ -20,9 +20,9 @@
                     data-type="text" 
                     data-responsive_offset="on" 
                     data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                    data-textAlign="['left','left','left','left','left','center']">Choose a powerful <br />design for your Start-up</div>
+                    data-textAlign="['left','left','left','left','left','center']">Mempermudah Segalanya <br /></div>
                     
-                    <div class="tp-caption tp-resizeme secand_text" 
+                    <!-- <div class="tp-caption tp-resizeme secand_text" 
                         data-x="['left','left','left','left','15','center']" 
                         data-hoffset="['0','80','80','0']" 
                         data-y="['top','top','top','top']" 
@@ -37,7 +37,7 @@
                         data-transform_idle="o:1;"
                         data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
                         data-textAlign="['left','left','left','left','left','center']">Get your freebie template now!
-                    </div>
+                    </div> -->
                     
                     <!-- <div class="tp-caption tp-resizeme" 
                         data-x="['left','left','left','left','15','center']" data-hoffset="['0','80','80','0']" 
@@ -53,7 +53,7 @@
                         data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
                         <a class="more_btn" href="#">Discover</a>
                     </div> -->
-                    <div class="tp-caption tp-resizeme single_img" 
+                    <!-- <div class="tp-caption tp-resizeme single_img" 
                     data-x="['right','right','right','right','right','right']" 
                     data-hoffset="['0','0','0','0']" 
                     data-y="['top','top','top','top']" 
@@ -68,7 +68,7 @@
                     data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
                     data-textAlign="['left','left','left','left','left','center']">
                         <img src="sierra/img/home-slider/slider-m-1.png" alt="">
-                    </div>
+                    </div> -->
                 </div>
             </li>
             <li data-index="rs-1588" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -89,7 +89,7 @@
                     data-type="text" 
                     data-responsive_offset="on" 
                     data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                    data-textAlign="['left','left','left','left','left','center']">Mempermudah Segalanya <br />design for your Start-up</div>
+                    data-textAlign="['left','left','left','left','left','center']">Mempermudah Segalanya <br /></div>
                     
                     <div class="tp-caption tp-resizeme secand_text" 
                         data-x="['left','left','left','left','15','center']" 
@@ -105,7 +105,7 @@
                         data-responsive_offset="on"
                         data-transform_idle="o:1;"
                         data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                        data-textAlign="['left','left','left','left','left','center']">Get your freebie template now!
+                        data-textAlign="['left','left','left','left','left','center']">
                     </div>
                     
                     <!-- <div class="tp-caption tp-resizeme" 
@@ -136,7 +136,7 @@
                     data-responsive_offset="on" 
                     data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
                     data-textAlign="['left','left','left','left','left','center']">
-                        <img src="sierra/img/home-slider/slider-m-1.png" alt="">
+                        <!-- <img src="sierra/img/home-slider/slider-m-1.png" alt=""> -->
                     </div>
                 </div>
             </li>
@@ -144,7 +144,7 @@
             <!-- LAYERS -->
                 <!-- LAYERS -->
                 <!-- LAYER NR. 1 -->
-                <div class="slider_text_box">
+                <!-- <div class="slider_text_box">
                     <div class="tp-caption tp-resizeme first_text" 
                     data-x="['left','left','left','left','15','center']" 
                     data-hoffset="['0','80','80','0']" 
@@ -158,9 +158,9 @@
                     data-type="text" 
                     data-responsive_offset="on" 
                     data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                    data-textAlign="['left','left','left','left','left','center']">Choose a powerful <br />design for your Start-up</div>
+                    data-textAlign="['left','left','left','left','left','center']">Choose a powerful <br />design for your Start-up</div> -->
                     
-                    <div class="tp-caption tp-resizeme secand_text" 
+                    <!-- <div class="tp-caption tp-resizeme secand_text" 
                         data-x="['left','left','left','left','15','center']" 
                         data-hoffset="['0','80','80','0']" 
                         data-y="['top','top','top','top']" 
@@ -174,8 +174,8 @@
                         data-responsive_offset="on"
                         data-transform_idle="o:1;"
                         data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                        data-textAlign="['left','left','left','left','left','center']">Get your freebie template now!
-                    </div>
+                        data-textAlign="['left','left','left','left','left','center']">Get your freebie template now! -->
+                    <!-- </div> -->
                     
                     <!-- <div class="tp-caption tp-resizeme" 
                         data-x="['left','left','left','left','15','center']" data-hoffset="['0','80','80','0']" 
@@ -205,7 +205,7 @@
                     data-responsive_offset="on" 
                     data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
                     data-textAlign="['left','left','left','left','left','center']">
-                        <img src="sierra/img/home-slider/slider-m-1.png" alt="">
+                        <!-- <img src="sierra/img/home-slider/slider-m-1.png" alt=""> -->
                     </div>
                 </div>
             </li>
