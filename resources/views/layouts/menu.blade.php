@@ -61,7 +61,7 @@
                         <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="/loginPage">Login</a></li>
                         <li class="nav-item-register"><a href="#">Register</a>
-                            <ul>
+                            <ul class="isi-dropdown">
                                 <li><a href="/registerPabrik">Pabrik Gula</a></li>
                                 <li><a href="/registerPetani">Petani</a></li>
                             </ul>

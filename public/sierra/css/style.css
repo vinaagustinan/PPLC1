@@ -2437,7 +2437,6 @@ i:before {
   /* display:none; biar gak kelihatan sebelum di tunjuk */
   list-style:none; 
   position:absolute; /*biar bisa ngambang*/
-  top:25px
 }
 .nav-item-register ul li a { /*kotak pilihan bahasa*/
   display:block;
@@ -2449,6 +2448,38 @@ i:before {
 .nav-item-register ul li a:hover { /*hover pilihan bahasa*/
   /* background-color:#012F52;  */
   /* color: white; */
+}
+li.nav-item-register {
+  display: inline-block;
+}
+
+.nav-item-register:hover .isi-dropdown {
+  display: block;
+}
+
+.isi-dropdown{
+  margin-top: -90px;
+}
+.isi-dropdown li{
+  margin-right: 50px !important;
+  width: 100px;
+  height: 20px !important;
+}
+.isi-dropdown a:hover {
+  /* color: #fff; */
+  color: #f3f3f3 ;
+}
+
+.isi-dropdown {
+  position: absolute;
+  display: none;
+  /* box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2); */
+  /* z-index: 1; */
+  /* background-color: #f9f9f9; */
+}
+
+.isi-dropdown a {
+  color: #3c3c3c;
 }
 /* End Footer Area css
 ============================================================================================ */
