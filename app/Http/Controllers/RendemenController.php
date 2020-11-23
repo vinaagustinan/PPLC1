@@ -13,7 +13,7 @@ class RendemenController extends Controller
     }
     public function tambahdataRendemen()
     {
-      return view('pabrik.detailRendemen');
+      return view('pabrik.formRendemen');
     }
     public function create(Request $request)
     {
