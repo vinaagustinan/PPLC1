@@ -10,24 +10,23 @@
                     {{csrf_field()}}
                     <div class="form-group">
                         <label for="NoAntrian">No Antrian</label>
-                        <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" placeholder="{{$data_Rendemen->NoAntrian}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua ')" oninput="setCustomValidity('')">
+                        <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" value="{{$data_Rendemen->NoAntrian}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua ')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
                         <label for="tanggal">Tanggal</label>
-                        <input type="date" class="form-control" id="tanggal" name="tanggal"  placeholder="{{$data_Rendemen->tanggal}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <input type="date" class="form-control" id="tanggal" name="tanggal"  value="{{$data_Rendemen->tanggal}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
                         <label for="NilaiRendemen">Nilai Rendemen</label>
-                        <input type="text" class="form-control" id="NilaiRendemen" name="NilaiRendemen"  placeholder="{{$data_Rendemen->NilaiRendemen}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <input type="text" class="form-control" id="NilaiRendemen" name="NilaiRendemen"  value="{{$data_Rendemen->NilaiRendemen}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
                         <label for="DetailRendemen">Detail Pehitungan Rendemen</label>
-                        <!-- <input type="textarea" class="form-control" id="NilaiRendemen"> -->
-                        <textarea class="form-control" aria-label="With textarea" id="DetailRendemen" name="DetailRendemen" placeholder="{{$data_Rendemen->DetailRendemen}}"required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')"></textarea>
+                        <textarea class="form-control" aria-label="With textarea" id="DetailRendemen" name="DetailRendemen" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">{{$data_Rendemen->DetailRendemen}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="BeratTebu">Berat Tebu (Kwintal)</label>
-                        <input type="text" class="form-control" id="BeratTebu" name="BeratTebu"  placeholder="{{$data_Rendemen->BeratTebu}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <input type="text" class="form-control" id="BeratTebu" name="BeratTebu"  value="{{$data_Rendemen->BeratTebu}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
         
 

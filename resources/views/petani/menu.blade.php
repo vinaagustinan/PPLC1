@@ -52,11 +52,11 @@
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="/pabrikRendemen">
+                            <a href="/petaniRendemen">
                                 <i class="fas fa-copy"></i>Data Rendemen</a>
                         </li>
                         <li>
-                            <a href="/pabrikAntrian">
+                            <a href="/petaniAntrian">
                                 <i class="fas fa-copy"></i>Data Antrian</a>
                         </li>
                     </ul>

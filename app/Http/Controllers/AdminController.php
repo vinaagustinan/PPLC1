@@ -46,9 +46,6 @@ class AdminController extends Controller
         $data_petani->update($request->all());
         return redirect ('/admPetani');
     }
-    public function dataRendemen(){
-        return view('admin.dataRendemen');
-    }
     public function dataAntrian(){
         return view('admin.dataAntrian');
     }
@@ -64,4 +61,12 @@ class AdminController extends Controller
     //     $data_admin = \App\Admin::find($id); 
     //     return view('admin.akun',['data_admin'=> $data_admin]);
     // }
+    public function dataRendemen(){
+        $data_rendemen = \App\Rendemen::all();
+        return view('admin.dataRendemen',['data_rendemen'=> $data_rendemen]);
+    }
+    public function detailRendemen($id){
+        $data_rendemen = \App\Rendemen::find($id);
+        return view('admin.detailRendemen',['data_rendemen'=> $data_rendemen]);
+    }
 }

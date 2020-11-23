@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Okt 2020 pada 03.04
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.4.2
+-- Generation Time: Nov 23, 2020 at 03:27 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.3.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -42,7 +41,7 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -52,7 +51,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -60,12 +59,15 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2020_10_24_184602_create_admin_table', 1),
 (4, '2020_10_27_144733_create_petani_table', 1),
-(5, '2020_10_27_144832_create_pabrik_table', 1);
+(5, '2020_10_27_144832_create_pabrik_table', 1),
+(6, '2020_10_31_003828_create_rendemen_table', 2),
+(7, '2020_11_19_092317_create_rendemen_table', 3),
+(8, '2020_11_19_095145_create_rendemen_table', 4);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pabrik`
+-- Table structure for table `pabrik`
 --
 
 CREATE TABLE `pabrik` (
@@ -79,10 +81,18 @@ CREATE TABLE `pabrik` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `pabrik`
+--
+
+INSERT INTO `pabrik` (`id`, `user_id`, `nama_pabrik`, `no_hp`, `alamat`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Pabrik Gula Bagus', '0822111113333', 'Jember', 'Tidak Aktif', '2020-11-09 06:43:04', '2020-11-09 06:43:04'),
+(2, 2, 'pabrik gula', '085219699950', 'Jember', 'Tidak Aktif', '2020-11-17 23:03:27', '2020-11-17 23:03:27');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `password_resets`
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -94,7 +104,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `petani`
+-- Table structure for table `petani`
 --
 
 CREATE TABLE `petani` (
@@ -113,7 +123,35 @@ CREATE TABLE `petani` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `rendemen`
+--
+
+CREATE TABLE `rendemen` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `NoAntrian` bigint(20) NOT NULL,
+  `tanggal` date NOT NULL,
+  `NilaiRendemen` bigint(20) NOT NULL,
+  `DetailRendemen` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `BeratTebu` bigint(20) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `rendemen`
+--
+
+INSERT INTO `rendemen` (`id`, `NoAntrian`, `tanggal`, `NilaiRendemen`, `DetailRendemen`, `BeratTebu`, `created_at`, `updated_at`) VALUES
+(1, 12, '2020-11-23', 8, 'Nira = 12.78\r\nMTP = 9.5', 123, '2020-11-19 02:52:39', '2020-11-22 19:46:27'),
+(2, 14, '2020-11-19', 7, 'gatau', 1455, '2020-11-19 03:11:24', '2020-11-19 03:11:24'),
+(3, 14, '2020-11-19', 7, 'gatau', 1456, '2020-11-19 03:12:01', '2020-11-19 03:12:01'),
+(4, 14, '2020-11-19', 7, 'gatau sih', 1456, '2020-11-19 03:15:43', '2020-11-19 03:15:43'),
+(5, 17, '2020-11-21', 6, 'detail', 123, '2020-11-21 00:21:24', '2020-11-21 00:21:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -127,87 +165,107 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `aktor`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Admin', 'bagus@gmail.com', '$2y$10$2vEDoybQE3Z3N8Mfw9PPUew4waMdjoTDEFqsElP8fACnbFT83qfU.', NULL, '2020-11-09 06:43:02', '2020-11-09 06:43:02'),
+(2, 'Pabrik', 'pabrik@gmail.com', '$2y$10$0HIK8QVq5ZdDX.fmK.s7het3cgKc0q3VIwvDi.tnE2gunxkgFCsda', NULL, '2020-11-17 23:03:27', '2020-11-17 23:03:27');
+
+--
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `pabrik`
+-- Indexes for table `pabrik`
 --
 ALTER TABLE `pabrik`
   ADD PRIMARY KEY (`id`),
   ADD KEY `pabrik_user_id_foreign` (`user_id`);
 
 --
--- Indeks untuk tabel `petani`
+-- Indexes for table `petani`
 --
 ALTER TABLE `petani`
   ADD PRIMARY KEY (`id`),
   ADD KEY `petani_user_id_index` (`user_id`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `rendemen`
+--
+ALTER TABLE `rendemen`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `pabrik`
+-- AUTO_INCREMENT for table `pabrik`
 --
 ALTER TABLE `pabrik`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `petani`
+-- AUTO_INCREMENT for table `petani`
 --
 ALTER TABLE `petani`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `rendemen`
+--
+ALTER TABLE `rendemen`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `pabrik`
+-- Constraints for table `pabrik`
 --
 ALTER TABLE `pabrik`
   ADD CONSTRAINT `pabrik_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Ketidakleluasaan untuk tabel `petani`
+-- Constraints for table `petani`
 --
 ALTER TABLE `petani`
   ADD CONSTRAINT `petani_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);

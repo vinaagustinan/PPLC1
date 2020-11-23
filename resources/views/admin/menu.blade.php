@@ -140,6 +140,7 @@
                 </div>
             </header>
             <!-- HEADER DESKTOP-->
+            @yield('content')
             @yield('notifPabrik')
             @yield('notifPetani')
             @yield('akun')
