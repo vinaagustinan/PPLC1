@@ -37,9 +37,6 @@
                                 <td>{{$rendemen->BeratTebu}}</td>
                                 <td>
                                     <div class="table-data-feature">
-                                        <a href="/rincianrendemen/{{$rendemen->id}}/rincian" class="item" data-toggle="tooltip" data-placement="top" title="Rincian">
-                                            <i class="zmdi zmdi-more"></i>
-                                        </a>
                                         <a href="/pabrikRendemen/{{$rendemen->id}}/edit" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                             <i class="zmdi zmdi-edit"></i>
                                         </a>
