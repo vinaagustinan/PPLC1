@@ -47,7 +47,9 @@
                                 </td>
                             </tr>
                         @endforeach
+                        <a href="/tambahRendemen" type="button" class="btn btn-primary">Tambah</a>
                         </tbody>
+                       
                     </table>
                 </div>
             </div>
