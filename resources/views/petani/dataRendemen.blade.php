@@ -17,8 +17,8 @@
                             <tr>
                                 <th>No Antrian</th>
                                 <th>Tanggal</th>
-                                <th>Nilai Rendemen</th>
                                 <th>Berat Tebu</th>
+                                <th>Nilai Rendemen</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -27,11 +27,11 @@
                             <tr class="tr-shadow">
                                 <td>{{$rendemen->NoAntrian}}</td>
                                 <td>{{$rendemen->tanggal}}</td>
-                                <td>{{$rendemen->NilaiRendemen}}</td>
                                 <td>{{$rendemen->BeratTebu}}</td>
+                                <td>{{$rendemen->NilaiRendemen}}</td>
                                 <td>
                                     <div class="table-data-feature">
-                                        <a href="/petaniRendemen/{{$rendemen->id}}/detail" class="item" data-toggle="tooltip" data-placement="top" title="Rincian">
+                                        <a href="/petaniRendemen/{{$rendemen->id}}/rincian" class="item" data-toggle="tooltip" data-placement="top" title="Rincian">
                                             <i class="zmdi zmdi-more"></i>
                                         </a>
                                     </div>

@@ -65,8 +65,8 @@ class AdminController extends Controller
         $data_rendemen = \App\Rendemen::all();
         return view('admin.dataRendemen',['data_rendemen'=> $data_rendemen]);
     }
-    public function detailRendemen($id){
+    public function rincianRendemen($id){
         $data_rendemen = \App\Rendemen::find($id);
-        return view('admin.detailRendemen',['data_rendemen'=> $data_rendemen]);
+        return view('admin.rincianRendemen',['data_rendemen'=> $data_rendemen]);
     }
 }

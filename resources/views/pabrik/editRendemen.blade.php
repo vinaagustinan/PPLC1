@@ -17,18 +17,33 @@
                         <input type="date" class="form-control" id="tanggal" name="tanggal"  value="{{$data_Rendemen->tanggal}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
-                        <label for="NilaiRendemen">Nilai Rendemen</label>
-                        <input type="text" class="form-control" id="NilaiRendemen" name="NilaiRendemen"  value="{{$data_Rendemen->NilaiRendemen}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
-                    </div>
-                    <div class="form-group">
-                        <label for="DetailRendemen">Detail Pehitungan Rendemen</label>
-                        <textarea class="form-control" aria-label="With textarea" id="DetailRendemen" name="DetailRendemen" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">{{$data_Rendemen->DetailRendemen}}</textarea>
-                    </div>
-                    <div class="form-group">
                         <label for="BeratTebu">Berat Tebu (Kwintal)</label>
                         <input type="text" class="form-control" id="BeratTebu" name="BeratTebu"  value="{{$data_Rendemen->BeratTebu}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
-        
+                    <div class="form-group">
+                        <label for="NPP">Nira</label>
+                        <input type="text" class="form-control" id="NPP" name="NPP" value="{{$data_Rendemen->NPP}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                    </div>
+                    <div class="form-group">
+                        <label for="KNT">Kadar Nira Tebu</label>
+                        <input type="text" class="form-control" id="KNT" name="KNT" value="{{$data_Rendemen->KNT}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                    </div>
+                    <div class="form-group">
+                        <label for="HPB">Hasil Peneraan Brix</label>
+                        <input type="text" class="form-control" id="HPB" name="HPB" value="{{$data_Rendemen->HPB}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                    </div>
+                    <div class="form-group">
+                        <label for="PSHK">Perbandingan Setara Harkat Kemurnian</label>
+                        <input type="text" class="form-control" id="PSHK" name="PSHK" value="{{$data_Rendemen->PSHK}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                    </div>
+                    <div class="form-group">
+                        <label for="WR">Winter Rendemen</label>
+                        <input type="text" class="form-control" id="WR" name="WR" value="{{$data_Rendemen->WR}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                    </div>
+                    <div class="form-group">
+                        <label for="NilaiRendemen">Nilai Rendemen</label>
+                        <input type="text" class="form-control" id="NilaiRendemen" name="NilaiRendemen"  value="{{$data_Rendemen->NilaiRendemen}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                    </div>
 
                     <a href="/pabrikRendemen" type="button" class="btn btn-secondary">Kembali</a>
                     <button type="submit" class="btn btn-primary">Edit</button>

@@ -49,7 +49,7 @@ Route::group(['middleware' => ['auth','CekAktor:Admin']],function(){
     Route::get('/notifPabrik', 'AdminController@notifPabrik');
     Route::get('/notifPetani', 'AdminController@notifPetani');
     Route::get('/admRendemen', 'AdminController@dataRendemen');
-    Route::get('/admRendemen/{id}/detail', 'AdminController@detailRendemen');
+    Route::get('/admRendemen/{id}/rincian', 'AdminController@rincianRendemen');
 });
 
 
@@ -65,7 +65,6 @@ Route::group(['middleware' => ['auth','CekAktor:Pabrik']],function(){
     Route::post('/tambahRendemen/createRendemen', 'RendemenController@create');
     Route::get('/pabrikRendemen/{id}/edit', 'RendemenController@editdataRendemen');
     Route::post('/pabrikRendemen/{id}/update', 'RendemenController@updatedataRendemen');
-    Route::get('/rincianrendemen/{id}/rincian', 'RendemenController@rinciandataRendemen');
     // Route::get('/rincianRendemen', 'RendemenController@rincianRendemen');
     // Route::post('/rincianRendemen/{id}', 'AdminController@rincianRendemen');
     Route::get('/admAntrian', 'PabrikController@dataAntrian');  
@@ -81,5 +80,5 @@ Route::group(['middleware' => ['auth','CekAktor:Petani']],function(){
     Route::get('password', 'PetaniController@change')->name('password.change');
     Route::put('password', 'PetaniController@updatepass')->name('password.update');
     Route::get('/petaniRendemen', 'PetaniController@dataRendemen');
-    Route::get('/petaniRendemen/{id}/detail', 'PetaniController@detailRendemen');
+    Route::get('/petaniRendemen/{id}/rincian', 'RendemenController@rincianRendemen');
 });

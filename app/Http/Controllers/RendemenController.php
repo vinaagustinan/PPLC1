@@ -33,10 +33,10 @@ class RendemenController extends Controller
       return redirect ('/pabrikRendemen')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
 
     }
-    public function rinciandataRendemen($id)
+    public function rincianRendemen($id)
     {
       $data_Rendemen = \App\Rendemen::find($id); 
-      return view('pabrik.rincianrendemen', ['data_Rendemen'=> $data_Rendemen]);
+      return view('petani.rincianRendemen', ['data_rendemen'=> $data_Rendemen]);
     }
 
 }
