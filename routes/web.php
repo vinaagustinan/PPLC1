@@ -58,7 +58,6 @@ Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('d
     Route::post('/tambahRendemen/createRendemen', 'RendemenController@create');
     Route::get('/pabrikRendemen/{id}/edit', 'RendemenController@editdataRendemen');
     Route::post('/pabrikRendemen/{id}/update', 'RendemenController@updatedataRendemen');
-    Route::get('/rincianrendemen/{id}/rincian', 'RendemenController@rinciandataRendemen');
     // Route::get('/rincianRendemen', 'RendemenController@rincianRendemen');
     // Route::post('/rincianRendemen/{id}', 'AdminController@rincianRendemen');
 
@@ -77,5 +76,5 @@ Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('d
     Route::get('password', 'PetaniController@change')->name('password.change');
     Route::put('password', 'PetaniController@updatepass')->name('password.update');
     Route::get('/petaniRendemen', 'PetaniController@dataRendemen');
-    Route::get('/petaniRendemen/{id}/detail', 'PetaniController@detailRendemen');
+    Route::get('/petaniRendemen/{id}/rincian', 'PetaniController@rincianRendemen');
 // });

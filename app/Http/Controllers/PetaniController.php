@@ -69,8 +69,8 @@ class PetaniController extends Controller
         $data_rendemen = \App\Rendemen::all();
         return view('petani.dataRendemen',['data_rendemen'=> $data_rendemen]);
     }
-    public function detailRendemen($id){
+    public function rincianRendemen($id){
         $data_rendemen = \App\Rendemen::find($id);
-        return view('petani.detailRendemen',['data_rendemen'=> $data_rendemen]);
+        return view('petani.rincianRendemen',['data_rendemen'=> $data_rendemen]);
     }
 }

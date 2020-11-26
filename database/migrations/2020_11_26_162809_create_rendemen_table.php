@@ -15,12 +15,16 @@ class CreateRendemenTable extends Migration
     {
         Schema::create('rendemen', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->timestamps();
             $table->bigInteger('NoAntrian');
             $table->date('tanggal');
-            $table->bigInteger('NilaiRendemen');
-            $table->string('DetailRendemen');
             $table->bigInteger('BeratTebu');
-            $table->timestamps();
+            $table->bigInteger('NPP');
+            $table->bigInteger('KNT');
+            $table->bigInteger('HPB');
+            $table->bigInteger('PSHK');
+            $table->bigInteger('WR');
+            $table->bigInteger('NilaiRendemen');
         });
     }
 
