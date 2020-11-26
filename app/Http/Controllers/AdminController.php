@@ -57,10 +57,10 @@ class AdminController extends Controller
         $data_petani = \App\Petani::where('status', 'tidak aktif')->get();
         return view('admin.notifPetani',['data_petani'=> $data_petani]);
     }
-    // public function akun($id){
-    //     $data_admin = \App\Admin::find($id); 
-    //     return view('admin.akun',['data_admin'=> $data_admin]);
-    // }
+    public function akun($id){
+        $data_admin = \App\Admin::find($id); 
+        return view('admin.akun',['data_admin'=> $data_admin]);
+    }
     public function dataRendemen(){
         $data_rendemen = \App\Rendemen::all();
         return view('admin.dataRendemen',['data_rendemen'=> $data_rendemen]);

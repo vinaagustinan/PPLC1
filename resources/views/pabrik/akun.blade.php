@@ -5,10 +5,11 @@
         <div class="row">
             <div class="col-md-12">
                 <h3 class="title-5 m-b-35">Profil Akun Saya</h3>
-                <form>
+                <form method="POST" action="/akunPabrik/{{$data_pabrik->id}}" class="col-md-6">
+                {{csrf_field()}}
                   <div class="form-group">
                     <label for="nama">Nama</label>
-                    <input type="text" class="form-control" id="nama" placeholder="" >
+                    <input type="text" class="form-control" id="nama" placeholder="{{$data_pabrik->nama_pabrik}}" readonly >
                   </div>
                   <div class="form-group">
                     <label for="alamat">Alamat</label>

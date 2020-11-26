@@ -14,12 +14,23 @@ class PabrikController extends Controller{
   public function __construct(){
     $this->middleware('auth');
   }
-  public function akun(){
+  public function akunsaya(){
       return view('pabrik.akun');
   }
   public function home(){
       return view('pabrik.home');
   }
+
+  public function akun ($id)
+  {
+    $data_pabrik = \App\Pabrik::find($id); 
+    return view('pabrik.akun', ['data_pabrik'=> $data_pabrik]);
+  }
+
+
+
+
+
   public function dataRendemen(){
     $data_rendemen = \App\Admin::all(); //mengambil semua data pada database
         return view('pabrik.dataRendemen',['data_rendemen'=> $data_rendemen]);

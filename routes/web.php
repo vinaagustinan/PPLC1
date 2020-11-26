@@ -25,12 +25,14 @@ Route::get('/registerPabrik', 'RegisterController@registerPabrik');
 Route::post('/doRegisterPetani', 'RegisterController@doRegisterPetani')->name('doRegisterPetani');
 Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('doRegisterPabrik');
 
-// Auth::routes();
-// Route::group(['middleware' => ['auth','CekAktor:admin']],function(){
-//halaman admin
+Auth::routes();
+
+Route::group(['middleware' => ['auth','CekAktor:Admin']],function(){
     Route::get('/homeAdmin', 'AdminController@home')->name('homeAdmin');
     Route::get('/notifikasi','AdminController@notif');
-    // Route::get('/akunAdmin', 'AdminController@akun');
+    Route::get('/akunAdmin','AdminController@akun');
+
+
 
     Route::get('/admAdmin', 'AdminController@dataAdmin');
     Route::get('/admAdmin/{id}/detail', 'AdminController@detailAdmin');
@@ -38,20 +40,25 @@ Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('d
     Route::get('/admPabrik', 'AdminController@dataPabrik');
     Route::get('/admPabrik/{id}/edit', 'AdminController@editPabrik');
     Route::post('/admPabrik/{id}/update', 'AdminController@updatePabrik');
+
     Route::get('/admPetani', 'AdminController@dataPetani');
     Route::get('/admPetani/{id}/edit', 'AdminController@editPetani');
     Route::post('/admPetani/{id}/update', 'AdminController@updatePetani');
+
     Route::get('/admAntrian', 'AdminController@dataAntrian');
     Route::get('/notifPabrik', 'AdminController@notifPabrik');
     Route::get('/notifPetani', 'AdminController@notifPetani');
     Route::get('/admRendemen', 'AdminController@dataRendemen');
     Route::get('/admRendemen/{id}/detail', 'AdminController@detailRendemen');
-// });
+});
 
-// Route::group(['middleware' => ['auth','CekAktor:pabrik']],function(){
-    //halaman pabrik
+
+Route::group(['middleware' => ['auth','CekAktor:Pabrik']],function(){
+   
     Route::get('/homePabrik', 'PabrikController@home')->name('homePabrik');
-    Route::get('/akunAdmin/{{$admin->id}}', 'PabrikController@akun');
+    // Route::get('/akunPabrik', 'PabrikController@akunsaya');
+    Route::get('/akunPabrik/{id}', 'PabrikController@akun');
+
     //data Rendemen
     Route::get('/pabrikRendemen', 'RendemenController@dataRendemen');
     Route::get('/tambahRendemen', 'RendemenController@tambahdataRendemen');
@@ -61,15 +68,12 @@ Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('d
     Route::get('/rincianrendemen/{id}/rincian', 'RendemenController@rinciandataRendemen');
     // Route::get('/rincianRendemen', 'RendemenController@rincianRendemen');
     // Route::post('/rincianRendemen/{id}', 'AdminController@rincianRendemen');
-
-
-
     Route::get('/admAntrian', 'PabrikController@dataAntrian');  
     Route::get('password', 'PabrikController@change')->name('password.change');
     Route::put('password', 'PabrikController@updatepass')->name('password.update');
-// });
+});
 
-// Route::group(['middleware' => ['auth','CekAktor:petani']],function(){
+Route::group(['middleware' => ['auth','CekAktor:Petani']],function(){
     //halaman petani
     Route::get('/homePetani', 'PetaniController@home')->name('homePetani');
     Route::get('/akun', 'PetaniController@akun');
@@ -78,4 +82,4 @@ Route::post('/doRegisterPabrik', 'RegisterController@doRegisterPabrik')->name('d
     Route::put('password', 'PetaniController@updatepass')->name('password.update');
     Route::get('/petaniRendemen', 'PetaniController@dataRendemen');
     Route::get('/petaniRendemen/{id}/detail', 'PetaniController@detailRendemen');
-// });
+});
