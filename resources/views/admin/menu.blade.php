@@ -54,10 +54,10 @@
                             <a class="js-arrow" href="/homeAdmin">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="/admAdmin">
                                 <i class="fas fa-copy"></i>Data Admin</a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="/admPabrik">
                                 <i class="fas fa-copy"></i>Data Pabrik Gula</a>

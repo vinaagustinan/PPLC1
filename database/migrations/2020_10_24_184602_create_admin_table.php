@@ -15,12 +15,11 @@ class CreateAdminTable extends Migration
     {
         Schema::create('admin', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('user_id')->unsigned()->nullable()->index();
             $table->string('nama',50);
-            $table->string('username',20);
-            $table->string('email',50);
-            $table->string('password',20);
-            $table->enum('status',['aktif','tidak aktif']);
+            $table->string('no_hp',13);
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

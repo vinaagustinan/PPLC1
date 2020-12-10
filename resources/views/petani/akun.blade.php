@@ -5,33 +5,30 @@
         <div class="row">
             <div class="col-md-12">
                 <h3 class="title-5 m-b-35">Profil Akun Saya</h3>
-                <form>
-                  <div class="form-group">
-                    <label for="nama">Nama</label>
-                    <input type="text" class="form-control" id="nama" placeholder="" >
-                  </div>
-                  <div class="form-group">
-                    <label for="alamat">Alamat</label>
-                    <input type="text" class="form-control" id="alamat" placeholder="" >
-                  </div>
-                  <div class="form-group">
-                    <label for="no_hp">No HP</label>
-                    <input type="text" class="form-control" id="no_hp" placeholder="">
-                  </div>
+                <form method="POST" action="/updateProfil" class="col-md-6">
+                  {{csrf_field()}}
                   <div class="form-group">
                     <label for="exampleFormControlInput1">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="">
+                    <input type="email" class="form-control" id="email" value="{{auth()->user()->email}}" readonly>
                   </div>
                   <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="text" class="form-control" id="password" placeholder="">
+                    <label for="nama">Nama</label>
+                    <input type="text" class="form-control" id="nama" value="{{auth::user()->Petani->nama}}" >
+                  </div><div class="form-group">
+                  <div class="form-group">
+                    <label for="no_hp">No HP</label>
+                    <input type="text" class="form-control" id="no_hp" value="{{auth::user()->Petani->no_hp}}">
+                  </div>
+                    <label for="nama">NIK</label>
+                    <input type="text" class="form-control" id="nama" value="{{auth::user()->Petani->nama}}" >
                   </div>
                   <div class="form-group">
-                    <label for="status">Status</label>
-                    <select class="form-control" id="status" value="">
-                      <option>Aktif</option>
-                      <option>Tidak Aktif</option>
-                    </select>
+                    <label for="alamat">Alamat Lahan</label>
+                    <input type="text" class="form-control" id="alamat" value="{{auth::user()->Petani->alamat_lahan}}" >
+                  </div>
+                  <div class="form-group">
+                    <label for="alamat">Luas Lahan</label>
+                    <input type="text" class="form-control" id="alamat" value="{{auth::user()->Petani->luas_lahan}}" >
                   </div>
                 </form><br>
                 <button type="submit" class="btn btn-primary">Simpan</button>

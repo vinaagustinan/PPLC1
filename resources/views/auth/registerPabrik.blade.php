@@ -37,6 +37,21 @@
 				<h2>Register Form</h2>
 				{{csrf_field()}}
 				<div class="form-row">
+					<label for="email">Nama Pabrik</label>
+					<input type="text" name="nama" id="nama" class="form-control" required placeholder="">
+				</div>
+				
+				<div class="form-row">
+					<label for="email">Alamat</label>
+					<input type="text" name="alamat" id="alamat" class="form-control" required placeholder="">
+				</div>
+				
+				<div class="form-row">
+					<label for="email">No Hp</label>
+					<input type="text" name="nohp" id="nohp" class="form-control" required placeholder="">
+				</div>
+
+				<div class="form-row">
 					<label for="email">Email</label>
 					<input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="">
 					@error('email')
@@ -59,20 +74,13 @@
                     @enderror
 				</div>
 
-				<div class="form-row">
-					<label for="email">Nama Pabrik</label>
-					<input type="text" name="nama" id="nama" class="form-control" required placeholder="">
-				</div>
-
-				<div class="form-row">
-					<label for="email">No Hp</label>
-					<input type="text" name="nohp" id="nohp" class="form-control" required placeholder="">
-				</div>
-
-				<div class="form-row">
-					<label for="email">Alamat</label>
-					<input type="text" name="alamat" id="alamat" class="form-control" required placeholder="">
-				</div>
+				<!-- <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+                    <label for="password_confirmation" class="col-md-8 control-label">Konfirmasi Password</label>
+                    <div class="">
+                        <input id="password_confirmation" type="password" class="form-control" name="password_confirmation">
+                        <span class="help-block">{{ $errors->first('password_confirmation') }}</span>
+                    </div>
+                </div> -->
 
 				<div class="form-row">
 					<!-- <label for="email"> Status </label> -->
