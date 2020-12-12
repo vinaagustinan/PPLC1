@@ -57,11 +57,10 @@ class RegisterController extends Controller{
   {
     $email = $request->input('email');
     $password = bcrypt($request->input('password'));
-    $nama_pabrik = $request->input('nama');
+    $nama_pabrik = $request->input('nama_pabrik');
     $noHP = $request->input('nohp');
     $alamat = $request->input('alamat');
-    $status = $request->input('status');
-    
+    $status = $request->input('status');  
     $pabrik = new Pabrik; // initialize petani model
     $user = new User; // initialize user model
 
@@ -78,18 +77,8 @@ class RegisterController extends Controller{
     $pabrik->status = $status;
     $pabrik->user_id = $insertedId;
 
-    $pabrik->save(); // save petani
+    $pabrik->save(); // save pabrik
 
     return redirect("/loginPage")->with('Sukses','Pendaftaran Akun Berhasil');
   }
-
-  // public function homeAdmin(){
-  //   return view('admin.dashboard');
-  // }
-  // public function homePabrik(){
-  //   return view('pebrik.dasboard');
-  // }
-  // public function homePetani(){
-  //   return view('petani.dasboard');
-  // }
 }

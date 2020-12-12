@@ -17,7 +17,7 @@
                         <input type="date" class="form-control" id="tanggal" name="tanggal" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
-                        <label for="BeratTebu">Berat Tebu (Kwintal)</label>
+                        <label for="BeratTebu">Berat Tebu (Kg)</label>
                         <input type="text" class="form-control" id="BeratTebu" name="BeratTebu" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
@@ -41,10 +41,9 @@
                         <input type="text" class="form-control" id="WR" name="WR" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
-                        <label for="NilaiRendemen">Nilai Rendemen</label>
-                        <input type="text" class="form-control" id="NilaiRendemen" name="NilaiRendemen" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <label for="NilaiRendemen">Rendemen Sementara</label>
+                        <input type="text" class="form-control" id="NilaiRendemen" name="NilaiRendemen" value="{{$data_Rendemen->NPP*$data_Rendemen->KNT*$data_Rendemen->HPB*$data_Rendemen->PSHK*$data_Rendemen->WR}}">
                     </div>
-        
 
                     <a href="/pabrikRendemen" type="button" class="btn btn-secondary">Kembali</a>
                     <button type="submit" class="btn btn-primary">Submit</button>

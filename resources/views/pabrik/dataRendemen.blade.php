@@ -29,7 +29,8 @@
                             <th>HPB</th>
                             <th>PSHK</th>
                             <th>WR</th>
-                            <th>Nilai Rendemen</th>
+                            <th>Rendemen Sementara</th>
+                            <th>Biaya</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -44,7 +45,8 @@
                             <td>{{$rendemen->HPB}}</td>
                             <td>{{$rendemen->PSHK}}</td>
                             <td>{{$rendemen->WR}}</td>
-                            <td>{{$rendemen->NilaiRendemen}}</td>
+                            <td>{{$rendemen->NPP*$rendemen->KNT*$rendemen->HPB*$rendemen->PSHK*$rendemen->WR}}</td>
+                            <td>{{$rendemen->Biaya}}
                             <td>
                                 <div class="table-data-feature">
                                     <a href="/pabrikRendemen/{{$rendemen->id}}/edit" class="item" data-toggle="tooltip" data-placement="top" title="Edit">

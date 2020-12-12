@@ -24,6 +24,7 @@ class CreateRendemenTable extends Migration
             $table->bigInteger('PSHK');
             $table->bigInteger('WR');
             $table->bigInteger('NilaiRendemen');
+            $table->bigInteger('Biaya');
             $table->timestamps();
         });
     }

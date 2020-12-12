@@ -50,7 +50,7 @@
                                 <button type="submit" class="btn btn-warning">
                                     Ganti Password
                                 </button>
-																<a href="/dashboard" class="btn btn-primary">Kembali</a>
+								<a href="/dashboard" class="btn btn-primary">Kembali</a>
                             </div>
                         </div>
                     </form>

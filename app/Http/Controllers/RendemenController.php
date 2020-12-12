@@ -11,32 +11,31 @@ class RendemenController extends Controller
         $data_Rendemen = \App\Rendemen::all(); //mengambil semua data pada database
         return view('pabrik.dataRendemen',['data_Rendemen'=> $data_Rendemen]);
     }
-    public function tambahdataRendemen()
-    {
+
+    public function tambahdataRendemen(){
       return view('pabrik.formRendemen');
     }
-    public function create(Request $request)
-    {
-      \App\Rendemen::create($request->all());
-      return redirect ('/pabrikRendemen')->with('sukses','Data Rendemen berhasil disimpan');
 
+    public function create(Request $request){
+      $this->validate($request, [
+        '' => 
+      ])
     }
-    public function editdataRendemen($id)
-    {
+
+    public function editdataRendemen($id){
       $data_Rendemen = \App\Rendemen::find($id); 
       return view('pabrik.editRendemen', ['data_Rendemen'=> $data_Rendemen]);
     }
-    public function updatedataRendemen(Request $request,$id)
-    {
+
+    public function updatedataRendemen(Request $request,$id){
       $data_Rendemen = \App\Rendemen::find($id); 
       $data_Rendemen->update($request->all());
       return redirect ('/pabrikRendemen')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
-
     }
+    
     public function rincianRendemen($id)
     {
       $data_Rendemen = \App\Rendemen::find($id); 
       return view('petani.rincianRendemen', ['data_rendemen'=> $data_Rendemen]);
     }
-
 }

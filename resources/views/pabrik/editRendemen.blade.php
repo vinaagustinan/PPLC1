@@ -1,4 +1,4 @@
-@extends('petani.menu')
+@extends('pabrik.menu')
 @section('dataRendemen')
 <section class="p-t-20">
     <div class="container">
@@ -17,7 +17,7 @@
                         <input type="date" class="form-control" id="tanggal" name="tanggal"  value="{{$data_Rendemen->tanggal}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
-                        <label for="BeratTebu">Berat Tebu (Kwintal)</label>
+                        <label for="BeratTebu">Berat Tebu (Kg)</label>
                         <input type="text" class="form-control" id="BeratTebu" name="BeratTebu"  value="{{$data_Rendemen->BeratTebu}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
@@ -39,10 +39,6 @@
                     <div class="form-group">
                         <label for="WR">Winter Rendemen</label>
                         <input type="text" class="form-control" id="WR" name="WR" value="{{$data_Rendemen->WR}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
-                    </div>
-                    <div class="form-group">
-                        <label for="NilaiRendemen">Nilai Rendemen</label>
-                        <input type="text" class="form-control" id="NilaiRendemen" name="NilaiRendemen"  value="{{$data_Rendemen->NilaiRendemen}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
 
                     <a href="/pabrikRendemen" type="button" class="btn btn-secondary">Kembali</a>
