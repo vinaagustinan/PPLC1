@@ -16,6 +16,12 @@ class profilController extends Controller
         return view('petani.akun');
     }
 
+    public function profilPabrik()
+    {
+        return view('pabrik.akun');
+    }
+
+
     public function update(Request $request,$id)
     {
       $user = \App\User::find($id);
