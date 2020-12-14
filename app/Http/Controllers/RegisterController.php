@@ -58,7 +58,7 @@ class RegisterController extends Controller{
     $email = $request->input('email');
     $password = bcrypt($request->input('password'));
     $nama_pabrik = $request->input('nama_pabrik');
-    $noHP = $request->input('nohp');
+    $no_hp = $request->input('no_hp');
     $alamat = $request->input('alamat');
     $status = $request->input('status');  
     $pabrik = new Pabrik; // initialize petani model
@@ -72,7 +72,7 @@ class RegisterController extends Controller{
     $insertedId = $user->id;
 
     $pabrik->nama_pabrik = $nama_pabrik;
-    $pabrik->no_hp = $noHP;
+    $pabrik->no_hp = $no_hp;
     $pabrik->alamat = $alamat;
     $pabrik->status = $status;
     $pabrik->user_id = $insertedId;

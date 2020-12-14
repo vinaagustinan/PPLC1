@@ -36,7 +36,7 @@
                     <input type="text" class="form-control" name="luas_lahan" id="luas_lahan" value="{{auth::user()->Petani->luas_lahan}}" >
                   </div>
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="/admAdmin" type="button" class="btn btn-secondary">Kembali</a>
+                  <a href="/homePetani" type="button" class="btn btn-secondary">Kembali</a>
                 </form><br>
 
             </div>

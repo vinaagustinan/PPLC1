@@ -56,6 +56,7 @@ Route::group(['middleware' => ['auth','CekAktor:Admin']],function(){
 Route::group(['middleware' => ['auth','CekAktor:Pabrik']],function(){
    
     Route::get('/homePabrik', 'PabrikController@home')->name('homePabrik');
+    
     Route::get('/akunPabrik', 'profilController@profilPabrik');
     Route::post('/akunPabrik/{id}', 'profilController@updatePabrik');
 
@@ -73,14 +74,15 @@ Route::group(['middleware' => ['auth','CekAktor:Pabrik']],function(){
 Route::group(['middleware' => ['auth','CekAktor:Petani']],function(){
     //halaman petani
     Route::get('/homePetani', 'PetaniController@home')->name('homePetani');
+    
     Route::get('/akunPetani', 'profilController@profilPetani');
     Route::post('/akunPetani/{id}', 'profilController@updatePetani');
-
-
 
     Route::get('/admAntrian', 'PetaniController@dataAntrian');  
     Route::get('password', 'PetaniController@change')->name('password.change');
     Route::put('password', 'PetaniController@updatepass')->name('password.update');
     Route::get('/petaniRendemen', 'PetaniController@dataRendemen');
     Route::get('/petaniRendemen/{id}/rincian', 'RendemenController@rincianRendemen');
+
+    Route::get('/petaniAntrian','AntrianController@formAntrian');
 });

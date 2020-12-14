@@ -17,9 +17,28 @@ class RendemenController extends Controller
     }
 
     public function create(Request $request){
-      // $this->validate($request, [
-      //   '' => 
-      // ])
+      $this->validate($request, [
+        'NoAntrian' => 'required',
+        'tanggal' => 'required',
+        'BeratTebu' => 'required',
+        'NPP' => 'required',
+        'KNT' => 'required',
+        'HPB' => 'required',
+        'PSHK' => 'required',
+        'WR' => 'required',
+      ]);
+      $rendemen = new \App\Rendemen;
+      $rendemen->NoAntrian = $request->NoAntrian;
+      $rendemen->tanggal = $request->tanggal;
+      $rendemen->BeratTebu = $request->BeratTebu;
+      $rendemen->NPP = $request->NPP;
+      $rendemen->KNT = $request->KNT;
+      $rendemen->HPB = $request->HPB;
+      $rendemen->PSHK = $request->PSHK;
+      $rendemen->WR = $request->WR;
+      $rendemen->save();
+
+      return redirect ('/pabrikRendemen')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
     }
 
     public function editdataRendemen($id){

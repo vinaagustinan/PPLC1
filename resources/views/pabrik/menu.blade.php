@@ -41,7 +41,7 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="{{asset('CoolAdmin/asset/images/icon/logo.png')}}" alt="Cool Admin" />
+                    <!-- <img src="{{asset('CoolAdmin/asset/images/icon/logo.png')}}" alt="Cool Admin" /> -->
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -129,8 +129,7 @@
            
         </div>
     </div>
-
-    <!-- Jquery JS-->
+    
     <script src="{{asset('CoolAdmin/asset/vendor/jquery-3.2.1.min.js')}}"></script>
     <!-- Bootstrap JS-->
     <script src="{{asset('CoolAdmin/asset/vendor/bootstrap-4.1/popper.min.js')}}"></script>
@@ -153,7 +152,6 @@
 
     <!-- Main JS-->
     <script src="{{asset('CoolAdmin/asset/js/main.js')}}"></script>
-
 </body>
 </html>
 

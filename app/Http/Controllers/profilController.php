@@ -49,7 +49,6 @@ class profilController extends Controller
         'no_ktp' => $request->no_ktp,
         'alamat_lahan' => $request->alamat_lahan,
         'luas_lahan' => $request->luas_lahan,
-
     ]);
     
     return redirect ('/akunPetani')->with('sukses','Data Berhasil diupdate');;

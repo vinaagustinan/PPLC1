@@ -17,9 +17,15 @@
 <body class="form-v2">
 	<div class="page-content">
 		<div class="form-v2-content">
-		<div class="logo">
-			<!-- <img src="{{asset('login/assets/images/')}}" alt="form"> -->
-		<div>
+			<div class="form-left">
+				<img src="{{asset('login/assets/images/sugarcane2.jpg')}}" alt="form">
+				<!-- <div class="text-1">
+					<p>Bring Your Music Along<span>try Unlimited</span></p>
+				</div> -->
+				<!-- <div class="text-2">
+					<p><span>$9.99</span>/ Month</p>
+				</div> -->
+			</div>
 			<form class="form-detail" action="{{route('doRegisterPabrik')}}" method="POST" id="login">
 				@if (\Session::has('success'))
 					<div class="alert alert-success">
@@ -28,62 +34,67 @@
 						</ul>
 					</div>
 				@endif
-				<h2>Form Pendaftaran Akun Pabrik Gula</h2>
+				<h2>Register Form</h2>
 				{{csrf_field()}}
 				<div class="form-row">
-					<!-- <label for="email">Nama Pabrik</label> -->
-					<input type="text" name="nama" id="nama" class="form-control" placeholder="Nama Pabrik" required placeholder="">
-				</div>
-				<div class="form-row">
-					<!-- <label for="email">Alamat</label> -->
-					<input type="text" name="alamat" id="alamat" class="form-control" placeholder="Alamat" required placeholder="">
-				</div>
-				
-				<div class="form-row">
-					<!-- <label for="email">No Hp</label> -->
-					<input type="text" name="nohp" id="nohp" class="form-control" placeholder="No HP" required placeholder="">
-				</div>
-
-				<div class="form-row">
-					<!-- <label for="email">Email</label> -->
-					<input type="email" name="email" id="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="">
 					@error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
 				</div>
-
-				<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-            	    <!-- <label for="password" class="col-md-6 control-label">Password</label>	 -->
-            	    <div class="form-row">
-            	        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
-            	        <span class="help-block">{{ $errors->first('password') }}</span>
-            	    </div>
-            	</div>
-					
-            	<div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-            	    <!-- <label for="password_confirmation" class="col-md-6 control-label">Konfirmasi Password</label>	 -->
-            	    <div class="form-row">
-            	        <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" placeholder="Konformasi Password">
-            	        <span class="help-block">{{ $errors->first('password_confirmation') }}</span>
-            	    </div>
-            	</div>
-
-				<!-- <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                    <label for="password_confirmation" class="col-md-8 control-label">Konfirmasi Password</label>
-                    <div class="">
-                        <input id="password_confirmation" type="password" class="form-control" name="password_confirmation">
-                        <span class="help-block">{{ $errors->first('password_confirmation') }}</span>
-                    </div>
-                </div> -->
-
 				<!-- <div class="form-row">
-					<input type="hidden" name="status" id="status" value="Tidak Aktif">
+					<label for="your_email">Your Email:</label>
+					<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
 				</div> -->
-				<br>
+				<div class="form-row">
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" required autocomplete="current-password">
+					@error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+				</div>
+
+				<div class="form-row">
+					<label for="nama_pabrik">Nama Pabrik</label>
+					<input type="text" name="nama_pabrik" id="nama_pabrik" class="form-control" required placeholder="">
+				</div>
+
+				<div class="form-row">
+					<label for="no_hp">No HP</label>
+					<input type="text" name="no_hp" id="no_hp" class="form-control" required placeholder="">
+				</div>
+
+				<div class="form-row">
+					<label for="alamat">Alamat</label>
+					<input type="text" name="alamat" id="alamat" class="form-control" required placeholder="">
+				</div>
+
+				<div class="form-row">
+					<!-- <label for="email"> Status </label> -->
+					<input type="hidden" name="status" id="status" value="Tidak Aktif">
+					<!-- <select name="status" id="status" class="form-control">
+						<option disabled>Pilih Status</option>
+						<option value="aktif">aktif</option>
+						<option value="tidak aktif">Tidak Aktif</option>
+					</select> -->
+				</div>
+				<!-- <div class="form-row">
+					<label for="comfirm-password">Confirm Password</label>
+					<input type="password" name="confirm_password" id="confirm_password" class="input-text" required>
+				</div> -->
+				<!-- <div class="form-checkbox">
+					<label class="container"><p>By signing up, you agree to the <a href="#" class="text">Play Term of Service</a></p>
+					  	<input type="checkbox" name="agree" id="agree">
+					  	<span class="checkmark"></span>
+					</label>
+				</div> -->
 				<div class="form-row-last">
-					<button type="submit" class="btn btn-primary">Daftar</button>
+					<input type="submit" name="login" class="login" value="Register">
 				</div>
 			</form>
 		</div>
@@ -102,7 +113,7 @@
 		$( "#myform" ).validate({
 		  	rules: {
 		    	password: "required",
-		    	konfirmasi: {
+		    	confirm_password: {
 		      		equalTo: "#password"
 		    	}
 		  	},
