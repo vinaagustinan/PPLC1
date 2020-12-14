@@ -19,6 +19,7 @@
                                 <th>Tanggal</th>
                                 <th>Berat Tebu</th>
                                 <th>Nilai Rendemen</th>
+                                <th>Biaya</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -29,6 +30,7 @@
                                 <td>{{$rendemen->tanggal}}</td>
                                 <td>{{$rendemen->BeratTebu}}</td>
                                 <td>{{$rendemen->NilaiRendemen}}</td>
+                                <td>Rp{{$rendemen->Biaya}}</td>
                                 <td>
                                     <div class="table-data-feature">
                                         <a href="/petaniRendemen/{{$rendemen->id}}/rincian" class="item" data-toggle="tooltip" data-placement="top" title="Rincian">

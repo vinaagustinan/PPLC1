@@ -65,12 +65,4 @@ class PetaniController extends Controller
             ->route('password.change')
             ->withSuccess('Password berhasil diganti.');
     }
-    public function dataRendemen(){
-        $data_rendemen = \App\Rendemen::all();
-        return view('petani.dataRendemen',['data_rendemen'=> $data_rendemen]);
-    }
-    public function rincianRendemen($id){
-        $data_rendemen = \App\Rendemen::find($id);
-        return view('petani.rincianRendemen',['data_rendemen'=> $data_rendemen]);
-    }
 }

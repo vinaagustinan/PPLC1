@@ -7,6 +7,7 @@ use App\Rendemen;
 
 class RendemenController extends Controller
 {
+  //Halaman Pabrik
     public function dataRendemen(){
         $data_Rendemen = \App\Rendemen::all(); //mengambil semua data pada database
         return view('pabrik.dataRendemen',['data_Rendemen'=> $data_Rendemen]);
@@ -71,10 +72,15 @@ class RendemenController extends Controller
 
       return redirect ('pabrikRendemen')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
     }
-    
-    public function rincianRendemen($id)
-    {
-      $data_Rendemen = \App\Rendemen::find($id); 
-      return view('petani.rincianRendemen', ['data_rendemen'=> $data_Rendemen]);
+
+    //Halaman Petani
+    public function dataRendemenPetani(){
+      $data_rendemen = \App\Rendemen::all();
+      return view('petani.dataRendemen',['data_rendemen'=> $data_rendemen]);
+    }
+
+    public function rincianRendemen($id){
+      $data_rendemen = \App\Rendemen::find($id);
+      return view('petani.rincianRendemen',['data_rendemen'=> $data_rendemen]);
     }
 }
