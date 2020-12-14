@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="title-5 m-b-35">Data Profil Admin</h3>
-                <form method="POST" action="/updateProfil/" class="col-md-6">
+                <h3 class="title-5 m-b-35">Profil Akun Saya</h3>
+                <form method="POST" action="/updateProfil/{{auth::user()->Admin->user_id}}" class="col-md-6">
                   {{csrf_field()}}
                   <div class="form-group">
                     <label for="nama">Nama</label>

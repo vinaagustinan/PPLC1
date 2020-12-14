@@ -17,9 +17,9 @@ class RendemenController extends Controller
     }
 
     public function create(Request $request){
-      $this->validate($request, [
-        '' => 
-      ])
+      // $this->validate($request, [
+      //   '' => 
+      // ])
     }
 
     public function editdataRendemen($id){

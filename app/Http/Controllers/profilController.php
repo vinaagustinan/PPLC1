@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Pabrik;
+use App\Petani;
 
 class profilController extends Controller
 {
@@ -22,15 +24,34 @@ class profilController extends Controller
     }
 
 
-    public function update(Request $request,$id)
+    public function updatePabrik(Request $request,$id)
     {
-      $user = \App\User::find($id);
-      $user->update($request->all());
-      if($request->hasFile('avatar')){
-      $request->file('avatar')->move('images/',$request->file('avatar')->getClientOriginalName());
-      $user->avatar=$request->file('avatar')->getClientOriginalName();
-      $user->save();
+
+    $pabrik = Pabrik::findOrFail($id);
+
+    $pabrik->update([
+        'nama_pabrik'  => $request->nama_pabrik,
+        'alamat' => $request->alamat,
+        'no_hp' => $request->no_hp,
+    ]);
+    
+    return redirect ('/akunPabrik')->with('sukses','Data Berhasil diupdate');
     }
-    return redirect('/profilmitra')->with('sukses','Data Berhasil diupdate');
+
+    public function updatePetani(Request $request,$id)
+    {
+
+    $Petani = Petani::findOrFail($id);
+
+    $Petani->update([
+        'nama'  => $request->nama,
+        'no_hp' => $request->no_hp,
+        'no_ktp' => $request->no_ktp,
+        'alamat_lahan' => $request->alamat_lahan,
+        'luas_lahan' => $request->luas_lahan,
+
+    ]);
+    
+    return redirect ('/akunPetani')->with('sukses','Data Berhasil diupdate');;
     }
 }
