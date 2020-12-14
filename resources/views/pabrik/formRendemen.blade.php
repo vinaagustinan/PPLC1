@@ -40,10 +40,10 @@
                         <label for="WR">Winter Rendemen</label>
                         <input type="text" class="form-control" id="WR" name="WR" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
-                    <!-- <div class="form-group">
-                        <label for="NilaiRendemen">Rendemen Sementara</label>
-                        <input type="text" class="form-control" id="NilaiRendemen" name="NilaiRendemen">
-                    </div> -->
+                    <div class="form-group">
+                        <label for="hargaGiling">Harga Giling (/Kg)</label>
+                        <input type="text" class="form-control" id="hargaGiling" name="hargaGiling">
+                    </div>
 
                     <a href="/pabrikRendemen" type="button" class="btn btn-secondary">Kembali</a>
                     <button type="submit" class="btn btn-primary">Submit</button>

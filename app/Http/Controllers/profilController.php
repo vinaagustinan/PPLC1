@@ -51,6 +51,6 @@ class profilController extends Controller
         'luas_lahan' => $request->luas_lahan,
     ]);
     
-    return redirect ('/akunPetani')->with('sukses','Data Berhasil diupdate');;
+    return redirect ('/akunPetani')->with('sukses','Data Berhasil diupdate');
     }
 }
