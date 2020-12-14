@@ -4,9 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-            
                 <h3 class="title-5 m-b-35">Form Antrian</h3>
-                    <form method="POST" action="/" class="col-md-6">
+                    <form method="POST" action="/ambilAntrian/create" class="col-md-6">
                     {{csrf_field()}}
                     <div class="form-group">
                         <label for="NoAntrian">Nama</label>
@@ -29,9 +28,8 @@
                     </div>
                     <div class="form-group">
                         <label for="BeratTebu">No Polisi Truk</label>
-                        <input type="text" class="form-control" id="BeratTebu" name="BeratTebu" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <input type="text" class="form-control" id="nopol" name="nopol" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
-
                     <a href="/pabrikRendemen" type="button" class="btn btn-secondary">Kembali</a>
                     <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>

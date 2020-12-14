@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pabrik;
+use App\Antrian;
 use App\User;
 
 class AntrianController extends Controller
@@ -28,9 +29,21 @@ class AntrianController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $this->validate($request, [
+            'NoAntrian' => 'required',
+            'tanggal' => 'required',
+            'jam' => 'required',
+            'nopol' => 'required',
+          ]);
+          $antrian = new \App\Antrian;
+          $antrian->NoAntrian = $request->NoAntrian;
+          $antrian->tanggal = $request->tanggal;
+          $antrian->jam = $request->jam;
+          $antrian->nopol = $request->nopol;
+          $antrian->save();
+          return redirect ('/petaniAntrian')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
     }
 
     /**

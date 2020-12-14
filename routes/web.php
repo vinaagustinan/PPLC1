@@ -84,6 +84,8 @@ Route::group(['middleware' => ['auth','CekAktor:Petani']],function(){
     //data Antrian
     Route::get('/petaniAntrian', 'AntrianController@dataAntrian');  
     Route::get('/ambilAntrian', 'AntrianController@ambilAntrian'); 
+    Route::post('/ambilAntrian/create', 'AntrianController@create'); 
+    
     
     //ubah password
     Route::get('password', 'PetaniController@change')->name('password.change');

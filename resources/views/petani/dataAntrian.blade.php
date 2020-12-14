@@ -23,15 +23,9 @@
                         <tr>
                             <th>No Antrian</th>
                             <th>Tanggal</th>
-                            <th>Berat Tebu</th>
-                            <th>NPP</th>
-                            <th>KNT</th>
-                            <th>HPB</th>
-                            <th>PSHK</th>
-                            <th>WR</th>
-                            <th>Rendemen Sementara</th>
-                            <th>Biaya</th>
-                            <th>Action</th>
+                            <th>Jam</th>
+                            <th>Nama Pabrik</th>
+                            <th>Nopol Truk</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,8 +40,9 @@
                             </td>
                         </tr>
                     
-                    <a href="/ambilAntrian" type="button" class="btn btn-primary">Ambil Antrian</a>
+                    
                     </tbody>
+                    <a href="/ambilAntrian" type="button" class="btn btn-primary">Ambil Antrian</a>
                 </table>
             </div>
         </div>
