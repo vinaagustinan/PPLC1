@@ -10,7 +10,7 @@
     @endif
     <div class="row">
         <div class="col-md-12">
-            <h3 class="title-5 m-b-35">Data Rendemen</h3>
+            <h3 class="title-5 m-b-35">Data Antrian</h3>
             <div class="table-data__tool">
                 <!-- <div class="table-data__tool-right">
                     <button class="au-btn au-btn-icon au-btn--green au-btn--small">
@@ -35,28 +35,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($data_Rendemen as $rendemen)
+                    
                         <tr class="tr-shadow">
-                            <td>{{$rendemen->NoAntrian}}</td>
-                            <td>{{$rendemen->tanggal}}</td>
-                            <td>{{$rendemen->BeratTebu}}</td>
-                            <td>{{$rendemen->NPP}}</td>
-                            <td>{{$rendemen->KNT}}</td>
-                            <td>{{$rendemen->HPB}}</td>
-                            <td>{{$rendemen->PSHK}}</td>
-                            <td>{{$rendemen->WR}}</td>
-                            <td>{{$rendemen->NPP*$rendemen->KNT*$rendemen->HPB*$rendemen->PSHK*$rendemen->WR}}</td>
-                            <td>{{$rendemen->Biaya}}
-                            <td>
+                   
                                 <div class="table-data-feature">
-                                    <a href="/pabrikRendemen/{{$rendemen->id}}/edit" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <a href="#" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                         <i class="zmdi zmdi-edit"></i>
                                     </a>
                                 </div>
                             </td>
                         </tr>
-                    @endforeach
-                    <a href="/tambahRendemen" type="button" class="btn btn-primary">Tambah</a>
+                    
+                    <a href="/ambilAntrian" type="button" class="btn btn-primary">Ambil Antrian</a>
                     </tbody>
                 </table>
             </div>
