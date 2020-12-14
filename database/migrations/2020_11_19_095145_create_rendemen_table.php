@@ -24,6 +24,7 @@ class CreateRendemenTable extends Migration
             $table->float('PSHK');
             $table->float('WR');
             $table->float('NilaiRendemen')->nullable();
+            $table->bigInteger('hargaGiling')->nullable();
             $table->bigInteger('Biaya')->nullable();
             $table->timestamps();
         });

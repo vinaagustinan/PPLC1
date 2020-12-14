@@ -26,6 +26,7 @@ class RendemenController extends Controller
         'HPB' => 'required',
         'PSHK' => 'required',
         'WR' => 'required',
+        'hargaGiling' => 'required',
       ]);
       $rendemen = new \App\Rendemen;
       $rendemen->NoAntrian = $request->NoAntrian;
@@ -36,6 +37,7 @@ class RendemenController extends Controller
       $rendemen->HPB = $request->HPB;
       $rendemen->PSHK = $request->PSHK;
       $rendemen->WR = $request->WR;
+      $rendemen->hargaGiling = $request->hargaGiling;
       $rendemen->save();
 
       return redirect ('/pabrikRendemen')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
