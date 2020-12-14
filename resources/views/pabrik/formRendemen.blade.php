@@ -6,7 +6,7 @@
             <div class="col-md-12">
             
                 <h3 class="title-5 m-b-35">Input Data Rendemen</h3>
-                    <form method="POST" action="tambahRendemen/createRendemen" class="col-md-6">
+                    <form method="POST" action="/tambahRendemen/createRendemen" class="col-md-6">
                     {{csrf_field()}}
                     <div class="form-group">
                         <label for="NoAntrian">No Antrian</label>
@@ -43,6 +43,12 @@
                     <div class="form-group">
                         <label for="hargaGiling">Harga Giling (/Kg)</label>
                         <input type="text" class="form-control" id="hargaGiling" name="hargaGiling">
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" class="form-control" id="NilaiRendemen" name="NilaiRendemen">
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" class="form-control" id="Biaya" name="Biaya"">
                     </div>
 
                     <a href="/pabrikRendemen" type="button" class="btn btn-secondary">Kembali</a>

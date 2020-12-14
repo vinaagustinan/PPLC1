@@ -45,8 +45,8 @@
                             <td>{{$rendemen->HPB}}</td>
                             <td>{{$rendemen->PSHK}}</td>
                             <td>{{$rendemen->WR}}</td>
-                            <td>{{$rendemen->NPP*$rendemen->KNT*$rendemen->HPB*$rendemen->PSHK*$rendemen->WR}}</td>
-                            <td>Rp{{$rendemen->NPP*$rendemen->KNT*$rendemen->HPB*$rendemen->PSHK*$rendemen->WR*$rendemen->BeratTebu*$rendemen->hargaGiling}}
+                            <td>{{$rendemen->NilaiRendemen}}</td>
+                            <td>Rp{{$rendemen->Biaya}}</td>
                             <td>
                                 <div class="table-data-feature">
                                     <a href="/pabrikRendemen/{{$rendemen->id}}/edit" class="item" data-toggle="tooltip" data-placement="top" title="Edit">

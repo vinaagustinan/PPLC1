@@ -38,9 +38,11 @@ class RendemenController extends Controller
       $rendemen->PSHK = $request->PSHK;
       $rendemen->WR = $request->WR;
       $rendemen->hargaGiling = $request->hargaGiling;
+      $rendemen->NilaiRendemen = $request->NPP*$request->KNT*$request->HPB*$request->PSHK*$request->WR;
+      $rendemen->Biaya = $request->NPP*$request->KNT*$request->HPB*$request->PSHK*$request->WR*$request->BeratTebu*$request->hargaGiling;
       $rendemen->save();
 
-      return redirect ('/pabrikRendemen')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
+      return redirect ('/pabrikRendemen')->with('sukses','Data Rendemen berhasil disimpan');
     }
 
     public function editdataRendemen($id){
@@ -49,9 +51,25 @@ class RendemenController extends Controller
     }
 
     public function updatedataRendemen(Request $request,$id){
-      $data_Rendemen = \App\Rendemen::find($id); 
-      $data_Rendemen->update($request->all());
-      return redirect ('/pabrikRendemen')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
+      // $data_Rendemen = \App\Rendemen::find($id); 
+      // $data_Rendemen->update($request->all());
+      // return redirect ('/pabrikRendemen')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
+      $Rendemen = Rendemen::findOrFail($id);
+      $Rendemen->update([
+        'NoAntrian' => $request->NoAntrian,
+        'Tanggal' => $request->tanggal,
+        'BeratTebu' => $request->BeratTebu,
+        'NPP' => $request->NPP,
+        'KNT' => $request->KNT,
+        'HPB' => $request->HPB,
+        'PSHK' => $request->PSHK,
+        'WR' => $request->WR,
+        'hargaGiling' => $request->hargaGiling,
+        'NilaiRendemen' => $request->NPP*$request->KNT*$request->HPB*$request->PSHK*$request->WR,
+        'Biaya' => $request->NPP*$request->KNT*$request->HPB*$request->PSHK*$request->WR*$request->BeratTebu*$request->hargaGiling,
+      ]);
+
+      return redirect ('pabrikRendemen')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
     }
     
     public function rincianRendemen($id)
