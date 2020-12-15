@@ -35,18 +35,18 @@ class AntrianController extends Controller
     public function create(Request $request)
     {
         $this->validate($request, [
-            'id_petani' => 'required',
-            'id_pabrik' => 'required',
-            'nopol' => 'required',
-          ]);
-          $antrian = new \App\Antrian;
-     
-          $antrian->id_petani = $request->id_petani;
-          $antrian->id_pabrik = $request->id_pabrik;
-          $antrian->nopol = $request->nopol;
-          $antrian->save();
+          'id_petani' => 'required',
+          'id_pabrik' => 'required',
+          'nopol' => 'required',
+        ]);
+        $antrian = new \App\Antrian;
+    
+        $antrian->id_petani = $request->id_petani;
+        $antrian->id_pabrik = $request->id_pabrik;
+        $antrian->nopol = $request->nopol;
+        $antrian->save();
 
-          return redirect ('/petaniAntrian')->with('sukses','Data Antrian Berhasil diInputkan. Silahkan Menuggu untuk Mendapatkan Nomor Antrian');
+        return redirect ('/petaniAntrian')->with('sukses','Data Antrian Berhasil diInputkan. Silahkan Menuggu untuk Mendapatkan Nomor Antrian');
     }
 
     public function inputJadwal(Request $request, $id){
@@ -57,6 +57,14 @@ class AntrianController extends Controller
     public function saveJadwal(Request $request, $id){
         $data_antrian = \App\Antrian::find($id); 
         $data_antrian->update($request->all());
-        return redirect ('/pabrikAntrian');
+        
+
+          $data_antrian = new \App\Rendemen;
+      
+          $data_antrian->NoAntrian = $request->NoAntrian;
+          $data_antrian->tanggal = $request->tanggal;
+          $data_antrian->save();
+  
+          return redirect ('/petaniAntrian');
     }
 }

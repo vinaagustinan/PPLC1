@@ -17,12 +17,12 @@ class CreateRendemenTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('NoAntrian');
             $table->date('tanggal');
-            $table->bigInteger('BeratTebu');
-            $table->float('NPP');
-            $table->float('KNT');
-            $table->float('HPB');
-            $table->float('PSHK');
-            $table->float('WR');
+            $table->bigInteger('BeratTebu')->nullable();
+            $table->float('NPP')->nullable();
+            $table->float('KNT')->nullable();
+            $table->float('HPB')->nullable();
+            $table->float('PSHK')->nullable();
+            $table->float('WR')->nullable();
             $table->float('NilaiRendemen')->nullable();
             $table->bigInteger('hargaGiling')->nullable();
             $table->bigInteger('Biaya')->nullable();
