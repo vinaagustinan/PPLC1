@@ -1,5 +1,5 @@
 @extends('admin.menu')
-@section('dataAntrian')
+@section('content')
 <!-- DATA TABLE-->
 <section class="p-t-20">
     <div class="container">
