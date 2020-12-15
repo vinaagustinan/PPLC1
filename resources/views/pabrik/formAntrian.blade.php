@@ -17,7 +17,7 @@
                     </div>
                     <div class="form-group">
                     <label for="nama_pabrik">Nama Pabrik</label>
-                        <select class="form-control" name="user_id" id="user_id">
+                        <select class="form-control" name="nama_pabrik" id="nama_pabrik">
                             <option disabled value>Pilih Pabrik</option>
                             @foreach ($pabrik as $item)
                                 <option 

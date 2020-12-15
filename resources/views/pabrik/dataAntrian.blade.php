@@ -1,4 +1,4 @@
-@extends('petani.menu')
+@extends('pabrik.menu')
 @section('dataAntrian')
 <!-- DATA TABLE-->
 <section class="p-t-20">
@@ -22,32 +22,35 @@
                     <thead>
                         <tr>
                             <th>No Antrian</th>
+                            <th>Nama Petani</th>
                             <th>Tanggal</th>
-                            <th>Berat Tebu</th>
-                            <th>NPP</th>
-                            <th>KNT</th>
-                            <th>HPB</th>
-                            <th>PSHK</th>
-                            <th>WR</th>
-                            <th>Rendemen Sementara</th>
-                            <th>Biaya</th>
-                            <th>Action</th>
+                            <th>Jam</th>
+                            <th>Nama Pabrik</th>
+                            <th>Nopol Truk</th>
                         </tr>
                     </thead>
                     <tbody>
-                    
+                    @foreach($antrian as $antrian)
                         <tr class="tr-shadow">
-                   
-                                <div class="table-data-feature">
-                                    <a href="#" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                            <td>{{$antrian->NoAntrian}}</td>
+                            <td>{{$antrian->$pabrik->nama_pabrik}}<td>
+                            <td>{{$antrian->Tanggal}}</td>
+                            <td>{{$antrian->Jam}}</td>
+                            <td>{{$antrian->nopol}}</td>
+                            <td>
+                            <div class="table-data-feature">
+                                    <a href="/pabrikRendemen/{{$antrian->id}}/edit" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                         <i class="zmdi zmdi-edit"></i>
                                     </a>
-                                </div>
+                            </div>
                             </td>
                         </tr>
                     @endforeach
-                    <a href="/tambahRendemen" type="button" class="btn btn-primary">Ambil Antrian</a>
+     
+                    <a href="/inputAntrian" type="button" class="btn btn-primary">Tambah Antrian</a>
+                    
                     </tbody>
+                    
                 </table>
             </div>
         </div>

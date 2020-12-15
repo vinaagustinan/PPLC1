@@ -15,35 +15,44 @@ class AntrianController extends Controller
         return view('petani.dataAntrian');
     }
 
+    public function dataAntrianPabrik(){
+        $antrian = Antrian::all();
+        return view('pabrik.dataAntrian',['antrian'=> $antrian]);
+    }
+
     public function ambilAntrian(){
         
         $pabrik = Pabrik::all();
         return view('petani.formAntrian', compact('pabrik'));
     }
 
+    public function inputAntrian(){
+        
+        $antrian = Antrian::all();
+        return view('pabrik.formAntrian', compact('pabrik'));
+    }
 
 
-    
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create(Request $request)
     {
         $this->validate($request, [
-            'NoAntrian' => 'required',
-            'tanggal' => 'required',
-            'jam' => 'required',
+            // 'NoAntrian' => 'required',
+            // 'tanggal' => 'required',
+            // 'jam' => 'required',
+            'nama_pabrik' => 'required',
+            'no_hp'=> 'required',
             'nopol' => 'required',
           ]);
           $antrian = new \App\Antrian;
-          $antrian->NoAntrian = $request->NoAntrian;
-          $antrian->tanggal = $request->tanggal;
-          $antrian->jam = $request->jam;
+        //   $antrian->NoAntrian = $request->NoAntrian;
+        //   $antrian->tanggal = $request->tanggal;
+        //   $antrian->jam = $request->jam;
+          $antrian->nama_pabrik = $request->nama_pabrik;
+          $antrian->no_hp = $request->no_hp;
           $antrian->nopol = $request->nopol;
           $antrian->save();
-          return redirect ('/petaniAntrian')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
+          
+          return redirect ('/petaniAntrian')->with('sukses','Data Antrian Berhasil diInputkan');
     }
 
     /**

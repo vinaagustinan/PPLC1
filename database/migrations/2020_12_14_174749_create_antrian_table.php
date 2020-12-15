@@ -15,10 +15,11 @@ class CreateAntrianTable extends Migration
     {
         Schema::create('antrian', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('id_petani');
             $table->bigInteger('NoAntrian')->nullable();
             $table->date('tanggal')->nullable();
             $table->time('jam')->nullable();
-            $table->bigInteger('nopol');
+            $table->string('nopol');
             $table->timestamps();
         });
     }

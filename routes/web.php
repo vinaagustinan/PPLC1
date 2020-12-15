@@ -70,9 +70,14 @@ Route::group(['middleware' => ['auth','CekAktor:Pabrik']],function(){
     Route::post('/pabrikRendemen/{id}/update', 'RendemenController@updatedataRendemen');
 
     //data Antrian
-    Route::get('/pabrikAntrian', 'AntrianController@dataAntrian');  
+    Route::get('/pabrikAntrian', 'AntrianController@dataAntrianPabrik');  
+    Route::get('/inputAntrian', 'AntrianController@inputAntrian');
+
+
     Route::get('/ubahPassPabrik', 'PabrikController@change');
     Route::put('/ubahPassPabrik/update', 'PabrikController@updatepass');
+    Route::get('password', 'PabrikController@change')->name('password.change');
+    Route::put('password', 'PabrikController@updatepass')->name('password.update');
 });
 
 Route::group(['middleware' => ['auth','CekAktor:Petani']],function(){
