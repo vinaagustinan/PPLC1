@@ -24,7 +24,7 @@ class PabrikController extends Controller{
           return view('pabrik.dataRendemen',['data_rendemen'=> $data_rendemen]);
     }
     public function change(){
-        return view('petani.ubahPassword');
+        return view('pabrik.ubahPassword');
     }
 
     public function updatepass(){
@@ -62,9 +62,7 @@ class PabrikController extends Controller{
         $user->password = bcrypt(request('password'));
         $user->save();
 
-        return redirect()
-            ->route('password.change')
-            ->withSuccess('Password berhasil diganti.');
+        return redirect('/loginPage')->withSuccess('Password berhasil diganti.');
     }
   
 }

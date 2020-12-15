@@ -13,7 +13,7 @@
                         <div class="alert alert-success">{{ session('success') }}</div>
                     @endif
 
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('password.update') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="/ubahPassPabrik/update">
 
                         {{ csrf_field() }}
                         {{ method_field('put') }}
@@ -47,10 +47,8 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-warning">
-                                    Ganti Password
-                                </button>
-																<a href="/dashboard" class="btn btn-primary">Kembali</a>
+                                <button type="submit" class="btn btn-warning">Ganti Password</button>
+								<a href="/homePabrik" class="btn btn-primary">Kembali</a>
                             </div>
                         </div>
                     </form>

@@ -41,11 +41,11 @@
                     </div>
                     <div class="form-group">
                         <label for="NilaiRendemen">Nilai Rendemen</label>
-                        <input type="text" class="form-control" id="NilaiRendemen" name="NilaiRendemen"  value="{{$data_rendemen->NilaiRendemen}}" readonly>
+                        <input type="text" class="form-control" id="NilaiRendemen" name="NilaiRendemen" value="{{$data_rendemen->NilaiRendemen}}" readonly>
                     </div>
                     <div class="form-group">
                         <label for="hargaGiling">Harga Giling (/Kg)</label>
-                        <input type="text" class="form-control" id="hargaGiling" name="hargaGiling"  value="Rp{{$data_rendemen->hargaGiling}}" readonly>
+                        <input type="text" class="form-control" id="hargaGiling" name="hargaGiling" value="Rp{{$data_rendemen->hargaGiling}}" readonly>
                     </div>
                     <div class="form-group">
                         <label for="Biaya">Biaya</label>

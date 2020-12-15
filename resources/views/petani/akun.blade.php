@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h3 class="title-5 m-b-35">Profil Akun Saya</h3>
-                <form method="POST" action="/akunPetani/{{auth::user()->Petani->user_id}}" class="col-md-6">
+                <form method="POST" action="/akunPetani/{{auth::user()->Petani->id}}" class="col-md-6">
                   {{csrf_field()}}
                   <div class="form-group">
                     <label for="exampleFormControlInput1">Email</label>

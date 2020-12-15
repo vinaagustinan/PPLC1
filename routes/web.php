@@ -32,7 +32,9 @@ Auth::routes();
 Route::group(['middleware' => ['auth','CekAktor:Admin']],function(){
     Route::get('/homeAdmin', 'AdminController@home')->name('homeAdmin');
     Route::get('/notifikasi','AdminController@notif');
+
     Route::get('/akunAdmin','profilController@profilAdmin');
+    Route::post('/akunAdmin/{id}', 'profilController@updateAdmin');
 
     Route::get('/admAdmin', 'AdminController@dataAdmin');
     Route::get('/admAdmin/{id}/detail', 'AdminController@detailAdmin');
@@ -54,9 +56,9 @@ Route::group(['middleware' => ['auth','CekAktor:Admin']],function(){
 
 
 Route::group(['middleware' => ['auth','CekAktor:Pabrik']],function(){
-   
     Route::get('/homePabrik', 'PabrikController@home')->name('homePabrik');
     
+    //profil
     Route::get('/akunPabrik', 'profilController@profilPabrik');
     Route::post('/akunPabrik/{id}', 'profilController@updatePabrik');
 
@@ -69,15 +71,15 @@ Route::group(['middleware' => ['auth','CekAktor:Pabrik']],function(){
 
     //data Antrian
     Route::get('/pabrikAntrian', 'AntrianController@dataAntrian');  
-    Route::get('password', 'PabrikController@change')->name('password.change');
-    Route::put('password', 'PabrikController@updatepass')->name('password.update');
+    Route::get('/ubahPassPabrik', 'PabrikController@change');
+    Route::put('/ubahPassPabrik/update', 'PabrikController@updatepass');
 });
 
 Route::group(['middleware' => ['auth','CekAktor:Petani']],function(){
     //halaman petani
     Route::get('/homePetani', 'PetaniController@home')->name('homePetani');
     
-    //akun petani
+    //profil
     Route::get('/akunPetani', 'profilController@profilPetani');
     Route::post('/akunPetani/{id}', 'profilController@updatePetani');
   
@@ -94,6 +96,4 @@ Route::group(['middleware' => ['auth','CekAktor:Petani']],function(){
     //data rendemen
     Route::get('/petaniRendemen', 'RendemenController@dataRendemenPetani');
     Route::get('/petaniRendemen/{id}/rincian', 'RendemenController@rincianRendemen');
-
-    // Route::get('/petaniAntrian','AntrianController@formAntrian');
 });

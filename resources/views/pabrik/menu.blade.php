@@ -98,7 +98,7 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__item">
-                                                <a href="{{route('password.change')}}">
+                                                <a href="/ubahPassPabrik">
                                                     <i class="fas fa-cog"></i>Ubah Password</a>
                                             </div>
                                                 <div class="account-dropdown__footer">
@@ -119,6 +119,7 @@
             @yield('home')
             @yield('dataRendemen')
             @yield('dataAntrian')
+            @yield('content')
         <!-- <div class="row">
             <div class="col-md-12">
                 <div class="copyright">

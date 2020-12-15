@@ -5,27 +5,35 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Pabrik;
 use App\Petani;
+use App\Admin;
 
 class profilController extends Controller
 {
-    public function profilAdmin()
-    {
+    public function profilAdmin(){
         return view('admin.akun');
     }
 
-    public function profilPetani()
-    {
+    public function profilPetani(){
         return view('petani.akun');
     }
 
-    public function profilPabrik()
-    {
+    public function profilPabrik(){
         return view('pabrik.akun');
     }
 
+    public function updateAdmin(Request $request,$id){
 
-    public function updatePabrik(Request $request,$id)
-    {
+        $admin = Admin::findOrFail($id);
+    
+        $admin->update([
+            'nama'  => $request->nama,
+            'no_hp' => $request->no_hp,
+        ]);
+        
+        return redirect ('/akunAdmin')->with('sukses','Data Berhasil diupdate');
+        }
+
+    public function updatePabrik(Request $request,$id){
 
     $pabrik = Pabrik::findOrFail($id);
 
@@ -38,8 +46,7 @@ class profilController extends Controller
     return redirect ('/akunPabrik')->with('sukses','Data Berhasil diupdate');
     }
 
-    public function updatePetani(Request $request,$id)
-    {
+    public function updatePetani(Request $request,$id){
 
     $Petani = Petani::findOrFail($id);
 
@@ -51,6 +58,6 @@ class profilController extends Controller
         'luas_lahan' => $request->luas_lahan,
     ]);
     
-    return redirect ('/akunPetani')->with('sukses','Data Berhasil diupdate');
+    return redirect ('/akunPetani')->with('sukses','Data Berhasil diupdate');;
     }
 }

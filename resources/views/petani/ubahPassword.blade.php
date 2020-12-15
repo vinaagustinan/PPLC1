@@ -47,10 +47,8 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-warning">
-                                    Ganti Password
-                                </button>
-								<a href="/dashboard" class="btn btn-primary">Kembali</a>
+                                <button type="submit" class="btn btn-warning">Ganti Password</button>
+								<a href="/homePetani" class="btn btn-primary">Kembali</a>
                             </div>
                         </div>
                     </form>

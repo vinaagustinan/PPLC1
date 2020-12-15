@@ -61,8 +61,6 @@ class PetaniController extends Controller
         $user->password = bcrypt(request('password'));
         $user->save();
 
-        return redirect()
-            ->route('password.change')
-            ->withSuccess('Password berhasil diganti.');
+        return redirect('/loginPage')->withSuccess('Password berhasil diganti.');
     }
 }
