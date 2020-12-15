@@ -8,22 +8,23 @@
                     <form method="POST" action="/ambilAntrian/create" class="col-md-6">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama" name="nama" value="{{auth::user()->Petani->nama}}" readonly>
+                        <!-- <label for="nama">Nama</label> -->
+                        <input type="hidden" class="form-control" id="nama" name="id" value="{{auth::user()->Petani->id}}" readonly>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="tanggal">No Hp</label>
-                        <input type="text" class="form-control" name="no_hp" id="no_hp" value="{{auth::user()->Petani->no_hp}}" readonly>
-                    </div>
+                        <input type="text" class="form-control" name="no_hp" id="no_hp" value="{{auth::user()->Petani->no_hp}}">
+                    </div> -->
                     <div class="form-group">
                     <label for="nama_pabrik">Nama Pabrik</label>
-                        <select class="form-control" name="user_id" id="user_id">
+                        <select class="form-control" name="nama_pabrik" id="user_id">
                             <option disabled value>Pilih Pabrik</option>
                             @foreach ($pabrik as $item)
                                 <option 
-                                    value="{{ $item->user_id }}">{{ $item->nama_pabrik }}
+                                    value="{{ $item->id }}">{{ $item->nama_pabrik }}
                                 </option>
                             @endforeach
+                            </option>
                         </select>
                     </div>
                     <div class="form-group">

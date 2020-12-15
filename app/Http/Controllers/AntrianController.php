@@ -36,29 +36,25 @@ class AntrianController extends Controller
     public function create(Request $request)
     {
         $this->validate($request, [
-            // 'NoAntrian' => 'required',
-            // 'tanggal' => 'required',
-            // 'jam' => 'required',
+            'id' => 'required',
             'nama_pabrik' => 'required',
-            'no_hp'=> 'required',
             'nopol' => 'required',
           ]);
           $antrian = new \App\Antrian;
-        //   $antrian->NoAntrian = $request->NoAntrian;
-        //   $antrian->tanggal = $request->tanggal;
-        //   $antrian->jam = $request->jam;
-          $antrian->nama_pabrik = $request->nama_pabrik;
-          $antrian->no_hp = $request->no_hp;
+     
+          $antrian->id_petani = $request->id;
+          $antrian->id_pabrik = $request->nama_pabrik;
+        //   $antrian->no_hp = $request->no_hp;
           $antrian->nopol = $request->nopol;
           $antrian->save();
-          
-          return redirect ('/petaniAntrian')->with('sukses','Data Antrian Berhasil diInputkan');
+
+          return redirect ('/petaniAntrian')->with('sukses','Data Antrian Berhasil diInputkan. Silahkan Menuggu untuk Mendapatkan Nomor Antrian');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request  $request.
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)

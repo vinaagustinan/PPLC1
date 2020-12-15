@@ -17,10 +17,13 @@ class CreateAntrianTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('id_petani');
             $table->bigInteger('NoAntrian')->nullable();
+            $table->string('nama_pabrik');
             $table->date('tanggal')->nullable();
             $table->time('jam')->nullable();
             $table->string('nopol');
             $table->timestamps();
+
+            
         });
     }
 
