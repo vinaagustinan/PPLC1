@@ -12,10 +12,6 @@
         <div class="col-md-12">
             <h3 class="title-5 m-b-35">Data Antrian</h3>
             <div class="table-data__tool">
-                <!-- <div class="table-data__tool-right">
-                    <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                        <i class="zmdi zmdi-plus"></i>add item</button>
-                </div> -->
             </div>
             <div class="table-responsive table-responsive-data2">
                 <table class="table table-striped">
@@ -32,11 +28,11 @@
                     
                         <tr class="tr-shadow">
                    
-                                <div class="table-data-feature">
+                                <!-- <div class="table-data-feature">
                                     <a href="#" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                         <i class="zmdi zmdi-edit"></i>
                                     </a>
-                                </div>
+                                </div> -->
                             </td>
                         </tr>
                     

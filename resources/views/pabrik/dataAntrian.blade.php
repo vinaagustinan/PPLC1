@@ -22,32 +22,31 @@
                     <thead>
                         <tr>
                             <th>No Antrian</th>
-                            <th>Nama Petani</th>
+                            <th>ID Petani</th>
                             <th>Tanggal</th>
                             <th>Jam</th>
-                            <th>Nama Pabrik</th>
                             <th>Nopol Truk</th>
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($antrian as $antrian)
+                    @foreach($data_antrian as $antrian)
                         <tr class="tr-shadow">
                             <td>{{$antrian->NoAntrian}}</td>
-                            <td>{{$antrian->$pabrik->nama_pabrik}}<td>
-                            <td>{{$antrian->Tanggal}}</td>
-                            <td>{{$antrian->Jam}}</td>
+                            <td>{{$antrian->id_petani}}</td>
+                            <td>{{$antrian->tanggal}}</td>
+                            <td>{{$antrian->jam}}</td>
                             <td>{{$antrian->nopol}}</td>
                             <td>
                             <div class="table-data-feature">
-                                    <a href="/pabrikRendemen/{{$antrian->id}}/edit" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                        <i class="zmdi zmdi-edit"></i>
-                                    </a>
+                                <a href="/pabrikAntrian/{{$antrian->id}}/edit" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <i class="zmdi zmdi-edit"></i>
+                                </a>
                             </div>
                             </td>
                         </tr>
                     @endforeach
      
-                    <a href="/inputAntrian" type="button" class="btn btn-primary">Tambah Antrian</a>
+                    <!-- <a href="/inputAntrian" type="button" class="btn btn-primary">Tambah Antrian</a> -->
                     
                     </tbody>
                     

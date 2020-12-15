@@ -9,7 +9,7 @@
                     {{csrf_field()}}
                     <div class="form-group">
                         <!-- <label for="nama">Nama</label> -->
-                        <input type="hidden" class="form-control" id="nama" name="id" value="{{auth::user()->Petani->id}}" readonly>
+                        <input type="hidden" class="form-control" id="nama" name="id_petani" value="{{auth::user()->Petani->id}}" readonly>
                     </div>
                     <!-- <div class="form-group">
                         <label for="tanggal">No Hp</label>
@@ -17,8 +17,8 @@
                     </div> -->
                     <div class="form-group">
                     <label for="nama_pabrik">Nama Pabrik</label>
-                        <select class="form-control" name="nama_pabrik" id="user_id">
-                            <option disabled value>Pilih Pabrik</option>
+                        <select class="form-control" name="id_pabrik" id="id_pabrik">
+                            <option>Pilih Pabrik</option>
                             @foreach ($pabrik as $item)
                                 <option 
                                     value="{{ $item->id }}">{{ $item->nama_pabrik }}

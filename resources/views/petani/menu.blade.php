@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>Halaman Petani</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{asset('CoolAdmin/asset/css/font-face.css')}}" rel="stylesheet" media="all">

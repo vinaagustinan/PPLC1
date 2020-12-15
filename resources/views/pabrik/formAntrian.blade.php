@@ -5,32 +5,29 @@
         <div class="row">
             <div class="col-md-12">
                 <h3 class="title-5 m-b-35">Form Antrian</h3>
-                    <form method="POST" action="/ambilAntrian/create" class="col-md-6">
+                    <form method="POST" action="/pabrikAntrian/{{$data_antrian->id}}/update" class="col-md-6">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama" name="nama" value="{{auth::user()->Petani->nama}}" readonly>
+                        <label for="NoAntrian">No Urut Antrian</label>
+                        <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" value="{{$data_antrian->NoAntrian}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
-                        <label for="tanggal">No Hp</label>
-                        <input type="text" class="form-control" name="no_hp" id="no_hp" value="{{auth::user()->Petani->no_hp}}" readonly>
+                        <label for="id_petani">ID Petani</label>
+                        <input type="text" class="form-control" name="id_petani" id="id_petani" value="{{$data_antrian->id_petani}}" readonly>
                     </div>
                     <div class="form-group">
-                    <label for="nama_pabrik">Nama Pabrik</label>
-                        <select class="form-control" name="nama_pabrik" id="nama_pabrik">
-                            <option disabled value>Pilih Pabrik</option>
-                            @foreach ($pabrik as $item)
-                                <option 
-                                    value="{{ $item->user_id }}">{{ $item->nama_pabrik }}
-                                </option>
-                            @endforeach
-                        </select>
+                        <label for="tanggal">Tanggal</label>
+                        <input type="date" class="form-control" name="tanggal" id="tanggal" value="{{$data_antrian->tanggal}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                    </div>
+                    <div class="form-group">
+                        <label for="jam">Jam</label>
+                        <input type="time" class="form-control" name="jam" id="jam" value="{{$data_antrian->jam}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
                         <label for="nopol">No Polisi Truk</label>
-                        <input type="text" class="form-control" id="nopol" name="nopol" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <input type="text" class="form-control" id="nopol" name="nopol" value="{{$data_antrian->nopol}}" readonly>
                     </div>
-                    <a href="/pabrikRendemen" type="button" class="btn btn-secondary">Kembali</a>
+                    <a href="/pabrikAntrian" type="button" class="btn btn-secondary">Kembali</a>
                     <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
             </div>
