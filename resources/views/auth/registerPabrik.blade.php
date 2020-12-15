@@ -38,7 +38,7 @@
 				{{csrf_field()}}
 				<div class="form-row">
 					<label for="email">Email</label>
-					<input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="">
+					<input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data pabrik harap diisi')" oninput="setCustomValidity('')">
 					@error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -51,7 +51,7 @@
 				</div> -->
 				<div class="form-row">
 					<label for="password">Password</label>
-					<input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" required autocomplete="current-password">
+					<input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" required autocomplete="current-password" class="form-control" required oninvalid="this.setCustomValidity('Form data pabrik harap diisi')" oninput="setCustomValidity('')">
 					@error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -61,17 +61,17 @@
 
 				<div class="form-row">
 					<label for="nama_pabrik">Nama Pabrik</label>
-					<input type="text" name="nama_pabrik" id="nama_pabrik" class="form-control" required placeholder="">
+					<input type="text" name="nama_pabrik" id="nama_pabrik" class="form-control" required placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data pabrik harap diisi')" oninput="setCustomValidity('')">
 				</div>
 
 				<div class="form-row">
 					<label for="no_hp">No HP</label>
-					<input type="text" name="no_hp" id="no_hp" class="form-control" required placeholder="">
+					<input type="text" name="no_hp" id="no_hp" class="form-control" required placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data pabrik harap diisi')" oninput="setCustomValidity('')">
 				</div>
 
 				<div class="form-row">
 					<label for="alamat">Alamat</label>
-					<input type="text" name="alamat" id="alamat" class="form-control" required placeholder="">
+					<input type="text" name="alamat" id="alamat" class="form-control" required placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data pabrik harap diisi')" oninput="setCustomValidity('')">
 				</div>
 
 				<div class="form-row">

@@ -17,7 +17,7 @@
                     </div> -->
                     <div class="form-group">
                     <label for="nama_pabrik">Nama Pabrik</label>
-                        <select class="form-control" name="id_pabrik" id="id_pabrik">
+                        <select class="form-control" name="id_pabrik" id="id_pabrik" required oninvalid="this.setCustomValidity('Form data antrian harap diisi semua')" oninput="setCustomValidity('')">
                             <option>Pilih Pabrik</option>
                             @foreach ($pabrik as $item)
                                 <option 
@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-group">
                         <label for="nopol">No Polisi Truk</label>
-                        <input type="text" class="form-control" id="nopol" name="nopol" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <input type="text" class="form-control" id="nopol" name="nopol" required oninvalid="this.setCustomValidity('Form data antrian harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <a href="/pabrikRendemen" type="button" class="btn btn-secondary">Kembali</a>
                     <button type="submit" class="btn btn-primary">Simpan</button>

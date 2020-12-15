@@ -61,6 +61,7 @@ class RegisterController extends Controller{
     $no_hp = $request->input('no_hp');
     $alamat = $request->input('alamat');
     $status = $request->input('status');  
+    
     $pabrik = new Pabrik; // initialize petani model
     $user = new User; // initialize user model
 

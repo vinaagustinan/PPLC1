@@ -9,7 +9,7 @@
                     {{csrf_field()}}
                     <div class="form-group">
                         <label for="NoAntrian">No Urut Antrian</label>
-                        <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" value="{{$data_antrian->NoAntrian}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" value="{{$data_antrian->NoAntrian}}" required oninvalid="this.setCustomValidity('Form data antrian harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
                         <label for="id_petani">ID Petani</label>
@@ -17,11 +17,11 @@
                     </div>
                     <div class="form-group">
                         <label for="tanggal">Tanggal</label>
-                        <input type="date" class="form-control" name="tanggal" id="tanggal" value="{{$data_antrian->tanggal}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <input type="date" class="form-control" name="tanggal" id="tanggal" value="{{$data_antrian->tanggal}}" required oninvalid="this.setCustomValidity('Form data antrian harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
                         <label for="jam">Jam</label>
-                        <input type="time" class="form-control" name="jam" id="jam" value="{{$data_antrian->jam}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <input type="time" class="form-control" name="jam" id="jam" value="{{$data_antrian->jam}}" required oninvalid="this.setCustomValidity('Form data antrian harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
                         <label for="nopol">No Polisi Truk</label>

@@ -1,4 +1,4 @@
-@extends('pabrik.menu')
+@extends('admin.menu')
 @section('dataAntrian')
 <!-- DATA TABLE-->
 <section class="p-t-20">
@@ -40,11 +40,11 @@
                             <td>{{$antrian->jam}}</td>
                             <td>{{$antrian->nopol}}</td>
                             <td>
-                            <div class="table-data-feature">
+                            <!-- <div class="table-data-feature">
                                 <a href="/pabrikAntrian/{{$antrian->id}}/edit" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                     <i class="zmdi zmdi-edit"></i>
                                 </a>
-                            </div>
+                            </div> -->
                             </td>
                         </tr>
                     @endforeach
