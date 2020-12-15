@@ -39,15 +39,16 @@ Route::group(['middleware' => ['auth','CekAktor:Admin']],function(){
     Route::get('/admAdmin', 'AdminController@dataAdmin');
     Route::get('/admAdmin/{id}/detail', 'AdminController@detailAdmin');
 
+    //data pabrik
     Route::get('/admPabrik', 'AdminController@dataPabrik');
     Route::get('/admPabrik/{id}/edit', 'AdminController@editPabrik');
     Route::post('/admPabrik/{id}/update', 'AdminController@updatePabrik');
-
+    //data admin
     Route::get('/admPetani', 'AdminController@dataPetani');
     Route::get('/admPetani/{id}/edit', 'AdminController@editPetani');
     Route::post('/admPetani/{id}/update', 'AdminController@updatePetani');
-
-    Route::get('/admAntrian', 'AdminController@dataAntrian');
+    //data antrian
+    Route::get('/admAntrian', 'AntrianController@dataAntrianAdm');
     Route::get('/notifPabrik', 'AdminController@notifPabrik');
     Route::get('/notifPetani', 'AdminController@notifPetani');
     Route::get('/admRendemen', 'AdminController@dataRendemen');

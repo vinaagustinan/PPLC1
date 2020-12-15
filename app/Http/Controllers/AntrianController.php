@@ -11,14 +11,20 @@ class AntrianController extends Controller
 {
 
     public function dataAntrian(){
-        // $data_Rendemen = \App\Rendemen::all(); //mengambil semua data pada database
-        return view('petani.dataAntrian');
+        $antrian = Antrian::all();
+        return view('petani.dataAntrian',['antrian'=> $antrian]);
     }
 
     public function dataAntrianPabrik(){
         $data_antrian = Antrian::all();
         return view('pabrik.dataAntrian',['data_antrian'=> $data_antrian]);
     }
+
+    public function dataAntrianAdm(){
+        $data_antrian = Antrian::all();
+        return view('Admin.dataAntrian',['data_antrian'=> $data_antrian]);
+    }
+
 
     public function ambilAntrian(){
         
