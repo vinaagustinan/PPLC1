@@ -30,7 +30,7 @@
                             <td>{{$antrian->NoAntrian}}</td>
                             <td>{{$antrian->tanggal}}</td>
                             <td>{{$antrian->jam}}</td>
-                            <td>{{$antrian->id_pabrik}}</td>
+                            <td>{{$antrian->pabrik_id}}</td>
                             <td>{{$antrian->nopol}}</td>
                             <td>
                             </td>

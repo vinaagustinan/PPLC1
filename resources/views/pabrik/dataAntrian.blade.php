@@ -32,7 +32,7 @@
                     @foreach($data_antrian as $antrian)
                         <tr class="tr-shadow">
                             <td>{{$antrian->NoAntrian}}</td>
-                            <td>{{$antrian->id_petani}}</td>
+                            <td>{{$antrian->petani_id}}</td>
                             <td>{{$antrian->tanggal}}</td>
                             <td>{{$antrian->jam}}</td>
                             <td>{{$antrian->nopol}}</td>

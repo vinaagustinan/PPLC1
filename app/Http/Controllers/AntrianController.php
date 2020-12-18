@@ -41,14 +41,14 @@ class AntrianController extends Controller
     public function create(Request $request)
     {
         $this->validate($request, [
-          'id_petani' => 'required',
-          'id_pabrik' => 'required',
+          'petani_id' => 'required',
+          'pabrik_id' => 'required',
           'nopol' => 'required',
         ]);
         $antrian = new \App\Antrian;
     
-        $antrian->id_petani = $request->id_petani;
-        $antrian->id_pabrik = $request->id_pabrik;
+        $antrian->petani_id = $request->petani_id;
+        $antrian->pabrik_id = $request->pabrik_id;
         $antrian->nopol = $request->nopol;
         $antrian->save();
 

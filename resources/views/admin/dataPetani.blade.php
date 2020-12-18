@@ -18,24 +18,24 @@
                             <tr>
                                 <!-- <th>No KTP</th> -->
                                 <th>Nama</th>
+                                <th>No KTP</th>
                                 <th>No HP</th>
-                                <!-- <th>Alamat</th> -->
                                 <!-- <th>Alamat Lahan</th> -->
                                 <!-- <th>Luas Lahan</th> -->
-                                <th>Status</th>
+                                <!-- <th>Status</th> -->
                             </tr>
                         </thead>
                         <tbody>
                         @foreach($data_petani as $petani)
                             <tr class="tr-shadow">
                                 <td>{{$petani->nama}}</td>
+                                <td>{{$petani->no_ktp}}</td>
                                 <td>{{$petani->no_hp}}</td>
-                                <td>{{$petani->status}}</td>
                                 <td>
                                     <div class="table-data-feature">
                                         <a href="/admPetani/{{$petani->id}}/edit">
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
+                                                <i class="zmdi zmdi-more"></i>
                                             </button>
                                         </a>
                                     </div>

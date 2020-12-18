@@ -43,7 +43,7 @@
                                         </button> -->
                                         <a href="/admPabrik/{{$pabrik->id}}/edit">
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
+                                                <i class="zmdi zmdi-more"></i>
                                             </button>
                                         </a>
                                     </div>

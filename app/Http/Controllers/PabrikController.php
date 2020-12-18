@@ -9,6 +9,7 @@ use Auth;
 use Hash;
 use Validator;
 use App\User;
+// use Illuminate\Auth\Pabrik;
 
 class PabrikController extends Controller{
     public function __construct(){

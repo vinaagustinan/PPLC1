@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>Halaman Pabrik</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{asset('CoolAdmin/asset/css/font-face.css')}}" rel="stylesheet" media="all">
@@ -41,7 +41,7 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <!-- <img src="{{asset('CoolAdmin/asset/images/icon/logo.png')}}" alt="Cool Admin" /> -->
+                    <!-- <img src="{{asset('CoolAdmin/asset/images/icon/LogoRC.png')}}" /> -->
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">

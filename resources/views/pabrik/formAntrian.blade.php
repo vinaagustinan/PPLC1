@@ -12,8 +12,8 @@
                         <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" value="{{$data_antrian->NoAntrian}}" required oninvalid="this.setCustomValidity('Form data antrian harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
-                        <label for="id_petani">ID Petani</label>
-                        <input type="text" class="form-control" name="id_petani" id="id_petani" value="{{$data_antrian->id_petani}}" readonly>
+                        <label for="petani_id">ID Petani</label>
+                        <input type="text" class="form-control" name="petani_id" id="petani_id" value="{{$data_antrian->petani_id}}" readonly>
                     </div>
                     <div class="form-group">
                         <label for="tanggal">Tanggal</label>

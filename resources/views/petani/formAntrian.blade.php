@@ -9,7 +9,7 @@
                     {{csrf_field()}}
                     <div class="form-group">
                         <!-- <label for="nama">Nama</label> -->
-                        <input type="hidden" class="form-control" id="nama" name="id_petani" value="{{auth::user()->Petani->id}}" readonly>
+                        <input type="hidden" class="form-control" id="nama" name="petani_id" value="{{auth::user()->Petani->id}}" readonly>
                     </div>
                     <!-- <div class="form-group">
                         <label for="tanggal">No Hp</label>
@@ -17,7 +17,7 @@
                     </div> -->
                     <div class="form-group">
                     <label for="nama_pabrik">Nama Pabrik</label>
-                        <select class="form-control" name="id_pabrik" id="id_pabrik" required oninvalid="this.setCustomValidity('Form data antrian harap diisi semua')" oninput="setCustomValidity('')">
+                        <select class="form-control" name="pabrik_id" id="pabrik_id" required oninvalid="this.setCustomValidity('Form data antrian harap diisi semua')" oninput="setCustomValidity('')">
                             <option>Pilih Pabrik</option>
                             @foreach ($pabrik as $item)
                                 <option 
