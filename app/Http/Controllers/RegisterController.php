@@ -21,31 +21,33 @@ class RegisterController extends Controller{
 
   public function doRegisterPetani(Request $request)
   {
-    $email = $request->input('email');
-    $password = bcrypt($request->input('password'));
-    $nama = $request->input('nama');
-    $noHP = $request->input('nohp');
-    $noKTP = $request->input('noktp');
-    $alamatLahan = $request->input('alamatlahan');
-    $luasLahan = $request->input('luaslahan');
-    
+      $this->validate($request,[
+        'email' => 'required',
+        'password' => 'required',
+        'confirmation' => 'required|same:password',
+        'nama' => 'required',
+        'no_hp' => 'required',
+        'no_ktp' => 'required',
+        'alamat_lahan' => 'required',
+        'luas_lahan'=> 'required',     
+      ]);
+
     $petani = new Petani; // initialize petani model
     $user = new User; // initialize user model
 
-    $user->email = $email;
-    $user->password = $password;
+    $user->email = $request->input('email');
+    $user->password = bcrypt($request->input('password'));
     $user->aktor = 'Petani';
     $user->save(); // save user
 
     $insertedId = $user->id;
 
-    $petani->nama = $nama;
-    $petani->no_hp = $noHP;
-    $petani->no_ktp = $noKTP;
-    $petani->alamat_lahan = $alamatLahan;
-    $petani->luas_lahan = $luasLahan;
+    $petani->nama = $request->input('nama');
+    $petani->no_hp = $request->input('no_hp');
+    $petani->no_ktp = $request->input('no_ktp');
+    $petani->alamat_lahan =$request->input('alamat_lahan');
+    $petani->luas_lahan = $request->input('luas_lahan');
     $petani->user_id = $insertedId;
-
     $petani->save(); // save petani
 
     return redirect('/loginPage')->with('Sukses','Pendaftaran Akun Berhasil');
@@ -53,27 +55,31 @@ class RegisterController extends Controller{
 
   public function doRegisterPabrik(Request $request)
   {
-    $email = $request->input('email');
-    $password = bcrypt($request->input('password'));
-    $nama_pabrik = $request->input('nama_pabrik');
-    $no_hp = $request->input('no_hp');
-    $alamat = $request->input('alamat');  
-    
+      $this->validate($request,[
+      'email' => 'required',
+      'password' => 'required',
+      'nama' => 'required',
+      'no_hp' => 'required',
+      'alamat' => 'required',
+      'password'=> 'required',
+      'confirmation' => 'required|same:password',
+      
+    ]);
+
     $pabrik = new Pabrik; // initialize petani model
     $user = new User; // initialize user model
 
-    $user->email = $email;
-    $user->password = $password;
+    $user->email = $request->input('email');
+    $user->password = bcrypt($request->input('password'));
     $user->aktor = 'Pabrik';
-    $user->save(); // save user
+    $user->save();
 
     $insertedId = $user->id;
 
-    $pabrik->nama_pabrik = $nama_pabrik;
-    $pabrik->no_hp = $no_hp;
-    $pabrik->alamat = $alamat;
+    $pabrik->nama = $request->input('nama');
+    $pabrik->no_hp = $request->input('no_hp');
+    $pabrik->alamat = $request->input('alamat');
     $pabrik->user_id = $insertedId;
-
     $pabrik->save(); // save pabrik
 
     return redirect("/loginPage")->with('Sukses','Pendaftaran Akun Berhasil');
