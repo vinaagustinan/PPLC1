@@ -38,7 +38,7 @@
 				{{csrf_field()}}
 				<div class="form-row">
 					<label for="email">Email</label>
-					<input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="">
+					<input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data petani harap diisi')" oninput="setCustomValidity('')">
 					@error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -51,37 +51,45 @@
 				</div> -->
 				<div class="form-row">
 					<label for="password">Password</label>
-					<input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" required autocomplete="current-password">
+					<input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" required autocomplete="current-password" class="form-control" required oninvalid="this.setCustomValidity('Form data petani harap diisi')" oninput="setCustomValidity('')">
 					@error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
 				</div>
-
+				<div class="form-row">
+					<label for="confirmation_password">Konfirmasi Password</label>
+					<input type="password" name="confirmation" id="confirmation" class="form-control @error('password') is-invalid @enderror" required autocomplete="current-password" class="form-control" required oninvalid="this.setCustomValidity('Form data pabrik harap diisi')" oninput="setCustomValidity('')">
+					@error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+				</div>
 				<div class="form-row">
 					<label for="email">Nama Lengkap</label>
-					<input type="text" name="nama" id="nama" class="form-control" required placeholder="">
+					<input type="text" name="nama" id="nama" class="form-control" required placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data petani harap diisi')" oninput="setCustomValidity('')">
 				</div>
 
 				<div class="form-row">
 					<label for="email">No Hp</label>
-					<input type="text" name="nohp" id="nohp" class="form-control" required placeholder="">
+					<input type="text" name="no_hp" id="no_hp" class="form-control" required placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data petani harap diisi')" oninput="setCustomValidity('')">
 				</div>
 
 				<div class="form-row">
 					<label for="email">No KTP</label>
-					<input type="text" name="noktp" id="noktp" class="form-control" required placeholder="">
+					<input type="text" name="no_ktp" id="no_ktp" class="form-control" required placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data petani harap diisi')" oninput="setCustomValidity('')">
 				</div>
 
 				<div class="form-row">
 					<label for="email">Alamat Lahan</label>
-					<input type="text" name="alamatlahan" id="alamatlahan" class="form-control" required placeholder="">
+					<input type="text" name="alamat_lahan" id="alamat_lahan" class="form-control" required placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data petani harap diisi')" oninput="setCustomValidity('')">
 				</div>
 
 				<div class="form-row">
 					<label for="email">Luas Lahan</label>
-					<input type="number" name="luaslahan" id="luaslahan" class="form-control" required placeholder="">
+					<input type="number" name="luas_lahan" id="luas_lahan" class="form-control" required placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data petani harap diisi')" oninput="setCustomValidity('')">
 				</div>
 
 				<div class="form-row">

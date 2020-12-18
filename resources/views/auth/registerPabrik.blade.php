@@ -58,10 +58,19 @@
                         </span>
                     @enderror
 				</div>
+				<div class="form-row">
+					<label for="confirmation_password">Konfirmasi Password</label>
+					<input type="password" name="confirmation" id="confirmation" class="form-control @error('password') is-invalid @enderror" required autocomplete="current-password" class="form-control" required oninvalid="this.setCustomValidity('Form data pabrik harap diisi')" oninput="setCustomValidity('')">
+					@error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+				</div>
 
 				<div class="form-row">
 					<label for="nama_pabrik">Nama Pabrik</label>
-					<input type="text" name="nama_pabrik" id="nama_pabrik" class="form-control" required placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data pabrik harap diisi')" oninput="setCustomValidity('')">
+					<input type="text" name="nama" id="nama" class="form-control" required placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data pabrik harap diisi')" oninput="setCustomValidity('')">
 				</div>
 
 				<div class="form-row">
@@ -74,14 +83,14 @@
 					<input type="text" name="alamat" id="alamat" class="form-control" required placeholder="" class="form-control" required oninvalid="this.setCustomValidity('Form data pabrik harap diisi')" oninput="setCustomValidity('')">
 				</div>
 
-				<div class="form-row">
+				<!-- <div class="form-row"> -->
 					<!-- <label for="email"> Status </label> -->
 					<!-- <select name="status" id="status" class="form-control">
 						<option disabled>Pilih Status</option>
 						<option value="aktif">aktif</option>
 						<option value="tidak aktif">Tidak Aktif</option>
 					</select> -->
-				</div>
+				<!-- </div> -->
 				<!-- <div class="form-row">
 					<label for="comfirm-password">Confirm Password</label>
 					<input type="password" name="confirm_password" id="confirm_password" class="input-text" required>
