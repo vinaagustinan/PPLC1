@@ -15,8 +15,7 @@ class CreateRendemenTable extends Migration
     {
         Schema::create('rendemen', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_antrian')->unsigned()->index();
-            $table->date('tanggal');
+            $table->bigInteger('id_antrian')->unsigned()->nullable()->index();
             $table->bigInteger('BeratTebu')->nullable();
             $table->double('NPP')->nullable();
             $table->double('KNT')->nullable();

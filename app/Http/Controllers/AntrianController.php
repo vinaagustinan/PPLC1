@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Pabrik;
 use App\Antrian;
 use App\User;
+use Auth;
 
 class AntrianController extends Controller
 {
@@ -17,6 +18,7 @@ class AntrianController extends Controller
 
     public function dataAntrianPabrik(){
         $data_antrian = Antrian::all();
+        // $data_antrian = Antrian::where('pabrik_id', Auth::user()->Pabrik()->id)->get();
         return view('pabrik.dataAntrian',['data_antrian'=> $data_antrian]);
     }
 
@@ -67,8 +69,7 @@ class AntrianController extends Controller
 
           $data_antrian = new \App\Rendemen;
       
-          $data_antrian->NoAntrian = $request->NoAntrian;
-          $data_antrian->tanggal = $request->tanggal;
+          $data_antrian->id_antrian = $request->id_antrian;
           $data_antrian->save();
   
           return redirect ('/petaniAntrian');

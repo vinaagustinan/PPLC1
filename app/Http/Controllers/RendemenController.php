@@ -23,8 +23,7 @@ class RendemenController extends Controller
 
     public function create(Request $request){
       $this->validate($request, [
-        'NoAntrian' => 'required',
-        'tanggal' => 'required',
+        'id_antrian' => 'required',
         'BeratTebu' => 'required',
         'NPP' => 'required',
         'KNT' => 'required',
@@ -34,8 +33,7 @@ class RendemenController extends Controller
         'hargaGiling' => 'required',
       ]);
       $rendemen = new \App\Rendemen;
-      $rendemen->NoAntrian = $request->NoAntrian;
-      $rendemen->tanggal = $request->tanggal;
+      $rendemen->id_antrian = $request->id_antrian;
       $rendemen->BeratTebu = $request->BeratTebu;
       $rendemen->NPP = $request->NPP;
       $rendemen->KNT = $request->KNT;
@@ -43,7 +41,7 @@ class RendemenController extends Controller
       $rendemen->PSHK = $request->PSHK;
       $rendemen->WR = $request->WR;
       $rendemen->hargaGiling = $request->hargaGiling;
-      $rendemen->NilaiRendemen = $request->NPP*$request->KNT*$request->HPB*$request->PSHK*$request->WR;
+      $rendemen->rendemenSementara = $request->NPP*$request->KNT*$request->HPB*$request->PSHK*$request->WR;
       $rendemen->Biaya = $request->NPP*$request->KNT*$request->HPB*$request->PSHK*$request->WR*$request->BeratTebu*$request->hargaGiling;
       $rendemen->save();
 
@@ -61,8 +59,7 @@ class RendemenController extends Controller
       // return redirect ('/pabrikRendemen')->with('sukses','Perubahan Data Rendemen berhasil disimpan');
       $Rendemen = Rendemen::findOrFail($id);
       $Rendemen->update([
-        'NoAntrian' => $request->NoAntrian,
-        'Tanggal' => $request->tanggal,
+        'id_antrian' => $request->id_antrian,
         'BeratTebu' => $request->BeratTebu,
         'NPP' => $request->NPP,
         'KNT' => $request->KNT,
@@ -70,7 +67,7 @@ class RendemenController extends Controller
         'PSHK' => $request->PSHK,
         'WR' => $request->WR,
         'hargaGiling' => $request->hargaGiling,
-        'NilaiRendemen' => $request->NPP*$request->KNT*$request->HPB*$request->PSHK*$request->WR,
+        'rendemenSementara' => $request->NPP*$request->KNT*$request->HPB*$request->PSHK*$request->WR,
         'Biaya' => $request->NPP*$request->KNT*$request->HPB*$request->PSHK*$request->WR*$request->BeratTebu*$request->hargaGiling,
       ]);
 

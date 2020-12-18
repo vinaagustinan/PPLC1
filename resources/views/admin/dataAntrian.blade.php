@@ -33,7 +33,7 @@
                     <tbody>
                     @foreach($data_antrian as $antrian)
                         <tr class="tr-shadow">
-                            <td>{{$antrian->NoAntrian}}</td>
+                            <td>{{$antrian->id_antrian}}</td>
                             <td>{{$antrian->petani_id}}</td>
                             <td>{{$antrian->pabrik_id}}</td>
                             <td>{{$antrian->tanggal}}</td>

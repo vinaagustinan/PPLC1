@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Rendemen extends Model
 {
     protected $table = 'Rendemen';
-    protected $fillable = ['NoAntrian', 'tanggal', 'BeratTebu', 'NPP', 'KNT', 'HPB', 'PSHK','WR','NilaiRendemen', 'hargaGiling', 'Biaya'];  
+    protected $fillable = ['id_antrian', 'BeratTebu', 'NPP', 'KNT', 'HPB', 'PSHK','WR','rendemenSementara', 'hargaGiling', 'Biaya'];  
     
     public function petani()
     {

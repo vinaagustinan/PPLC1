@@ -1,4 +1,4 @@
-@extends('petani.menu')
+@extends('pabrik.menu')
 @section('dataAntrian')
 <!-- DATA TABLE-->
 <section class="p-t-20">
@@ -22,7 +22,6 @@
                     <thead>
                         <tr>
                             <th>No Antrian</th>
-                            <th>Tanggal</th>
                             <th>Berat Tebu</th>
                             <th>NPP</th>
                             <th>KNT</th>
@@ -37,15 +36,14 @@
                     <tbody>
                     @foreach($data_Rendemen as $rendemen)
                         <tr class="tr-shadow">
-                            <td>{{$rendemen->NoAntrian}}</td>
-                            <td>{{$rendemen->tanggal}}</td>
+                            <td>{{$rendemen->id_antrian}}</td>
                             <td>{{$rendemen->BeratTebu}}</td>
                             <td>{{$rendemen->NPP}}</td>
                             <td>{{$rendemen->KNT}}</td>
                             <td>{{$rendemen->HPB}}</td>
                             <td>{{$rendemen->PSHK}}</td>
                             <td>{{$rendemen->WR}}</td>
-                            <td>{{$rendemen->NilaiRendemen}}</td>
+                            <td>{{$rendemen->rendemenSementara}}</td>
                             <td>Rp{{$rendemen->Biaya}}</td>
                             <td>
                                 <div class="table-data-feature">

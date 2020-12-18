@@ -16,7 +16,6 @@
                         <thead>
                             <tr>
                                 <th>No Antrian</th>
-                                <th>Tanggal</th>
                                 <th>Berat Tebu</th>
                                 <th>Nilai Rendemen</th>
                                 <th>Biaya</th>
@@ -26,10 +25,9 @@
                         <tbody>
                         @foreach($data_rendemen as $rendemen)
                             <tr class="tr-shadow">
-                                <td>{{$rendemen->NoAntrian}}</td>
-                                <td>{{$rendemen->tanggal}}</td>
+                                <td>{{$rendemen->id_antrian}}</td>
                                 <td>{{$rendemen->BeratTebu}}</td>
-                                <td>{{$rendemen->NilaiRendemen}}</td>
+                                <td>{{$rendemen->rendemenSementara}}</td>
                                 <td>Rp{{$rendemen->Biaya}}</td>
                                 <td>
                                     <div class="table-data-feature">

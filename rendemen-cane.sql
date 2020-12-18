@@ -128,9 +128,8 @@ CREATE TABLE `petani` (
 
 CREATE TABLE `rendemen` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `NoAntrian` bigint(20) NOT NULL,
-  `tanggal` date NOT NULL,
-  `NilaiRendemen` bigint(20) NOT NULL,
+  `id_antrian` bigint(20) NOT NULL,
+  `rendemenSementara` bigint(20) NOT NULL,
   `DetailRendemen` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `BeratTebu` bigint(20) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -141,12 +140,12 @@ CREATE TABLE `rendemen` (
 -- Dumping data for table `rendemen`
 --
 
-INSERT INTO `rendemen` (`id`, `NoAntrian`, `tanggal`, `NilaiRendemen`, `DetailRendemen`, `BeratTebu`, `created_at`, `updated_at`) VALUES
-(1, 12, '2020-11-23', 8, 'Nira = 12.78\r\nMTP = 9.5', 123, '2020-11-19 02:52:39', '2020-11-22 19:46:27'),
-(2, 14, '2020-11-19', 7, 'gatau', 1455, '2020-11-19 03:11:24', '2020-11-19 03:11:24'),
-(3, 14, '2020-11-19', 7, 'gatau', 1456, '2020-11-19 03:12:01', '2020-11-19 03:12:01'),
-(4, 14, '2020-11-19', 7, 'gatau sih', 1456, '2020-11-19 03:15:43', '2020-11-19 03:15:43'),
-(5, 17, '2020-11-21', 6, 'detail', 123, '2020-11-21 00:21:24', '2020-11-21 00:21:24');
+INSERT INTO `rendemen` (`id`, `id_antrian`, `rendemenSementara`, `DetailRendemen`, `BeratTebu`, `created_at`, `updated_at`) VALUES
+(1, 12, 8, 'Nira = 12.78\r\nMTP = 9.5', 123, '2020-11-19 02:52:39', '2020-11-22 19:46:27'),
+(2, 14,  7, 'gatau', 1455, '2020-11-19 03:11:24', '2020-11-19 03:11:24'),
+(3, 14, 7, 'gatau', 1456, '2020-11-19 03:12:01', '2020-11-19 03:12:01'),
+(4, 14,  7, 'gatau sih', 1456, '2020-11-19 03:15:43', '2020-11-19 03:15:43'),
+(5, 17,  6, 'detail', 123, '2020-11-21 00:21:24', '2020-11-21 00:21:24');
 
 -- --------------------------------------------------------
 

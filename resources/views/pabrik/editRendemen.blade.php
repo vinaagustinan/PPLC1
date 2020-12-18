@@ -9,12 +9,8 @@
                     <form method="POST" action="/pabrikRendemen/{{$data_Rendemen->id}}/update" class="col-md-6">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <label for="NoAntrian">No Antrian</label>
-                        <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" value="{{$data_Rendemen->NoAntrian}}" readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="tanggal">Tanggal</label>
-                        <input type="date" class="form-control" id="tanggal" name="tanggal"  value="{{$data_Rendemen->tanggal}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <label for="id_antrian">ID Antrian</label>
+                        <input type="text" class="form-control" id="id_antrian" name="id_antrian" value="{{$data_Rendemen->id_antrian}}" readonly>
                     </div>
                     <div class="form-group">
                         <label for="BeratTebu">Berat Tebu (Kg)</label>

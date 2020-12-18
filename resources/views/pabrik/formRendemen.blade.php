@@ -9,12 +9,8 @@
                     <form method="POST" action="/tambahRendemen/createRendemen" class="col-md-6">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <label for="NoAntrian">No Antrian</label>
-                        <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
-                    </div>
-                    <div class="form-group">
-                        <label for="tanggal">Tanggal</label>
-                        <input type="date" class="form-control" id="tanggal" name="tanggal" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
+                        <label for="id_antrian">No Antrian</label>
+                        <input type="text" class="form-control" id="id_antrian" name="id_antrian" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
                         <label for="BeratTebu">Berat Tebu (Kg)</label>
@@ -45,7 +41,7 @@
                         <input type="text" class="form-control" id="hargaGiling" name="hargaGiling">
                     </div>
                     <div class="form-group">
-                        <input type="hidden" class="form-control" id="NilaiRendemen" name="NilaiRendemen">
+                        <input type="hidden" class="form-control" id="rendemenSementara" name="rendemenSementara">
                     </div>
                     <div class="form-group">
                         <input type="hidden" class="form-control" id="Biaya" name="Biaya"">
