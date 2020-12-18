@@ -15,12 +15,14 @@ class CreateAntrianTable extends Migration
     {
         Schema::create('antrian', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_petani');
+            $table->bigInteger('petani_id')->unsigned()->index();
+            $table->bigInteger('pabrik_id')->unsigned()->index();
             $table->bigInteger('NoAntrian')->nullable();
-            $table->bigInteger('id_pabrik');
             $table->date('tanggal')->nullable();
             $table->time('jam')->nullable();
             $table->string('nopol');
+            $table->foreign('petani_id')->references('id')->on('petani');
+            $table->foreign('pabrik_id')->references('id')->on('pabrik');
             $table->timestamps();
 
             

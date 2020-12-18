@@ -28,7 +28,6 @@ class RegisterController extends Controller{
     $noKTP = $request->input('noktp');
     $alamatLahan = $request->input('alamatlahan');
     $luasLahan = $request->input('luaslahan');
-    $status = $request->input('status');
     
     $petani = new Petani; // initialize petani model
     $user = new User; // initialize user model
@@ -45,7 +44,6 @@ class RegisterController extends Controller{
     $petani->no_ktp = $noKTP;
     $petani->alamat_lahan = $alamatLahan;
     $petani->luas_lahan = $luasLahan;
-    $petani->status = $status;
     $petani->user_id = $insertedId;
 
     $petani->save(); // save petani
@@ -59,8 +57,7 @@ class RegisterController extends Controller{
     $password = bcrypt($request->input('password'));
     $nama_pabrik = $request->input('nama_pabrik');
     $no_hp = $request->input('no_hp');
-    $alamat = $request->input('alamat');
-    $status = $request->input('status');  
+    $alamat = $request->input('alamat');  
     
     $pabrik = new Pabrik; // initialize petani model
     $user = new User; // initialize user model
@@ -75,7 +72,6 @@ class RegisterController extends Controller{
     $pabrik->nama_pabrik = $nama_pabrik;
     $pabrik->no_hp = $no_hp;
     $pabrik->alamat = $alamat;
-    $pabrik->status = $status;
     $pabrik->user_id = $insertedId;
 
     $pabrik->save(); // save pabrik

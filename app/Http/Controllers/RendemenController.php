@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Rendemen;
+use App\Http\Controllers\Auth;
 
 class RendemenController extends Controller
 {
@@ -75,7 +76,7 @@ class RendemenController extends Controller
 
     //Halaman Petani
     public function dataRendemenPetani(){
-      $data_rendemen = \App\Rendemen::all();
+      $data_rendemen = Rendemen::where('id',Auth::Petani()->id)->get();
       return view('petani.dataRendemen',['data_rendemen'=> $data_rendemen]);
     }
 

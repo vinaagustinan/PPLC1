@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>Halaman Admin</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{asset('CoolAdmin/asset/css/font-face.css')}}" rel="stylesheet" media="all">
@@ -89,7 +89,7 @@
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
                             </form>
-                            <div class="noti-wrap">
+                            <!-- <div class="noti-wrap">
                                 <div class="account-item js-item-menu">
                                     <div class="content">
                                         <a href="">
@@ -111,7 +111,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="content">

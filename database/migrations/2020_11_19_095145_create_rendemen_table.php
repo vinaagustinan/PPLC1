@@ -15,17 +15,18 @@ class CreateRendemenTable extends Migration
     {
         Schema::create('rendemen', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('NoAntrian');
+            $table->bigInteger('id_antrian')->unsigned()->index();
             $table->date('tanggal');
             $table->bigInteger('BeratTebu')->nullable();
-            $table->float('NPP')->nullable();
-            $table->float('KNT')->nullable();
-            $table->float('HPB')->nullable();
-            $table->float('PSHK')->nullable();
-            $table->float('WR')->nullable();
-            $table->float('NilaiRendemen')->nullable();
+            $table->double('NPP')->nullable();
+            $table->double('KNT')->nullable();
+            $table->double('HPB')->nullable();
+            $table->double('PSHK')->nullable();
+            $table->double('WR')->nullable();
+            $table->double('rendemenSementara')->nullable();
             $table->bigInteger('hargaGiling')->nullable();
             $table->bigInteger('Biaya')->nullable();
+            $table->foreign('id_antrian')->references('id')->on('antrian');
             $table->timestamps();
         });
     }

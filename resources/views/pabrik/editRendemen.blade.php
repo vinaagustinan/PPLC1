@@ -10,7 +10,7 @@
                     {{csrf_field()}}
                     <div class="form-group">
                         <label for="NoAntrian">No Antrian</label>
-                        <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" value="{{$data_Rendemen->NoAntrian}}" required oninvalid="this.setCustomValidity('Form data rendemen harap diisi semua ')" oninput="setCustomValidity('')">
+                        <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" value="{{$data_Rendemen->NoAntrian}}" readonly>
                     </div>
                     <div class="form-group">
                         <label for="tanggal">Tanggal</label>

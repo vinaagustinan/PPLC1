@@ -16,10 +16,9 @@ class CreatePabrikTable extends Migration
         Schema::create('pabrik', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->string('nama_pabrik');
+            $table->string('nama');
             $table->string('no_hp');
             $table->string('alamat');
-            $table->string('status')->default('Pabrik');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

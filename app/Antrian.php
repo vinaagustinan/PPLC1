@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Antrian extends Model
 {
 
-    protected $fillable = ['id_petani','NoAntrian','id_pabrik', 'tanggal','jam','nopol',];
+    protected $fillable = ['NoAntrian','tanggal','jam','nopol',];
     protected $table = 'antrian';
 
     public function petani()
@@ -20,5 +20,8 @@ class Antrian extends Model
     	return $this->hasOne('App\Pabrik');
     }
 
-
+    public function rendemen()
+    {
+    	return $this->hasOne('App\Rendemen');
+    }
 }

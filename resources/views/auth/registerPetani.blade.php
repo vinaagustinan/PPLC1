@@ -86,7 +86,7 @@
 
 				<div class="form-row">
 					<!-- <label for="email"> Status </label> -->
-					<input type="hidden" name="status" id="status" value="Tidak Aktif">
+					<!-- <input type="hidden" name="status" id="status" value="Tidak Aktif"> -->
 					<!-- <select name="status" id="status" class="form-control">
 						<option disabled>Pilih Status</option>
 						<option value="aktif">aktif</option>

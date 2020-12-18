@@ -20,7 +20,7 @@
                                 <th>Alamat</th>
                                 <th>No Telpon</th>
                                 <!-- <th>Email</th> -->
-                                <th>Status</th>
+                                <!-- <th>Status</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -29,7 +29,7 @@
                                 <td>{{$pabrik->nama_pabrik}}</td>
                                 <td>{{$pabrik->alamat}}</td>
                                 <td>{{$pabrik->no_hp}}</td>
-                                <td>{{$pabrik->status}}</td>
+                                <!-- <td>{{$pabrik->status}}</td> -->
                                 <td>
                                     <div class="table-data-feature">
                                         <!-- <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
