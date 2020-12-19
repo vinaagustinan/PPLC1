@@ -7,6 +7,7 @@ use App\Pabrik;
 use App\Antrian;
 use App\User;
 use Auth;
+use DB;
 
 class AntrianController extends Controller
 {
@@ -17,16 +18,18 @@ class AntrianController extends Controller
     }
 
     public function dataAntrianPabrik(){
-        $data_antrian = Antrian::all();
         // $data_antrian = Antrian::where('pabrik_id', Auth::user()->Pabrik()->id)->get();
-        return view('pabrik.dataAntrian',['data_antrian'=> $data_antrian]);
+        $data_antrian = DB::table('antrian')
+        -> join('petani','petani.id', '=', 'antrian.petani_id')
+        -> select('antrian.NoAntrian','petani.nama','antrian.tanggal','antrian.jam','antrian.nopol','antrian.id')
+        -> get();
+        return view('pabrik.dataAntrian',compact('data_antrian'));
     }
 
     public function dataAntrianAdm(){
         $data_antrian = Antrian::all();
         return view('Admin.dataAntrian',['data_antrian'=> $data_antrian]);
     }
-
 
     public function ambilAntrian(){
         
@@ -35,7 +38,6 @@ class AntrianController extends Controller
     }
 
     public function inputAntrian(){
-        
         $antrian = Antrian::all();
         return view('pabrik.formAntrian', compact('pabrik'));
     }
@@ -58,12 +60,16 @@ class AntrianController extends Controller
     }
 
     public function inputJadwal(Request $request, $id){
-        $data_antrian = \App\Antrian::find($id); 
+        $data_antrian = \App\Antrian::find($id);
+        $data_antrian = DB::table('antrian')
+        -> join('petani','petani.id', '=', 'antrian.petani_id')
+        -> select('antrian.NoAntrian','petani.nama','antrian.tanggal','antrian.jam','antrian.nopol','antrian.id')
+        -> get(); 
         return view('pabrik.formAntrian',['data_antrian'=> $data_antrian]);
     }
 
     public function saveJadwal(Request $request, $id){
-        $data_antrian = \App\Antrian::find($id); 
+        $data_antrian = \App\Antrian::find($id);
         $data_antrian->update($request->all());
         
 
@@ -72,6 +78,6 @@ class AntrianController extends Controller
           $data_antrian->id_antrian = $request->id_antrian;
           $data_antrian->save();
   
-          return redirect ('/petaniAntrian');
+          return redirect ('/petaniAntrian', compact('data_antrian'));
     }
 }

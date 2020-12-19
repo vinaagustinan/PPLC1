@@ -22,7 +22,7 @@
                     <thead>
                         <tr>
                             <th>No Antrian</th>
-                            <th>ID Petani</th>
+                            <th>Nama Petani</th>
                             <th>Tanggal</th>
                             <th>Jam</th>
                             <th>Nopol Truk</th>
@@ -32,7 +32,7 @@
                     @foreach($data_antrian as $antrian)
                         <tr class="tr-shadow">
                             <td>{{$antrian->NoAntrian}}</td>
-                            <td>{{$antrian->id_petani}}</td>
+                            <td>{{$antrian->nama}}</td>
                             <td>{{$antrian->tanggal}}</td>
                             <td>{{$antrian->jam}}</td>
                             <td>{{$antrian->nopol}}</td>

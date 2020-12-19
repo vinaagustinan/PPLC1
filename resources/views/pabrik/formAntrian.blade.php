@@ -12,7 +12,7 @@
                         <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" value="{{$data_antrian->NoAntrian}}" required oninvalid="this.setCustomValidity('Form data antrian harap diisi semua')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
-                        <label for="petani_id">ID Petani</label>
+                        <label for="petani_id">Nama Petani</label>
                         <input type="text" class="form-control" name="petani_id" id="petani_id" value="{{$data_antrian->petani_id}}" readonly>
                     </div>
                     <div class="form-group">
