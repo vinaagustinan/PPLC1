@@ -82,10 +82,14 @@ class AntrianController extends Controller
         'nopol' => $request->nopol,
         ]);
         
-          $data_antrian = new \App\Rendemen;
-          $data_antrian->id_antrian = $request->id_antrian;
-          $data_antrian->save();
+        $rendemen = new \App\Rendemen;
+        $insertedId = $data_antrian->id;
+        $rendemen->id_antrian = $insertedId;
+        //   $data_antrian = new \App\Rendemen;
+        //   $data_antrian->id_antrian = $request->id_antrian;
+        $rendemen->save();
   
+
           return redirect ('/petaniAntrian', compact('data_antrian'));
     }
 }
