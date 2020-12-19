@@ -8,6 +8,10 @@
                     <form method="POST" action="/pabrikAntrian/{{$data_antrian->id}}/update" class="col-md-6">
                     {{csrf_field()}}
                     <div class="form-group">
+                        <!-- <label for="petani_id">Nama Petani</label> -->
+                        <input type="hidden" class="form-control" name="id_antrian" id="id_antrian" value="{{$data_antrian->id}}" readonly>
+                    </div>
+                    <div class="form-group">
                         <label for="NoAntrian">No Urut Antrian</label>
                         <input type="text" class="form-control" id="NoAntrian" name="NoAntrian" value="{{$data_antrian->NoAntrian}}" required oninvalid="this.setCustomValidity('Form data antrian harap diisi semua')" oninput="setCustomValidity('')">
                     </div>

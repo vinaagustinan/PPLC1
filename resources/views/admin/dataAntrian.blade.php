@@ -22,8 +22,8 @@
                     <thead>
                         <tr>
                             <th>No Antrian</th>
-                            <th>ID Petani</th>
-                            <th>ID Pabrik</th>
+                            <th>Nama Petani</th>
+                            <th>Nama Pabrik</th>
                             <th>Tanggal</th>
                             <th>Jam</th>
                             <th>Nopol Truk</th>
@@ -33,9 +33,9 @@
                     <tbody>
                     @foreach($data_antrian as $antrian)
                         <tr class="tr-shadow">
-                            <td>{{$antrian->id_antrian}}</td>
-                            <td>{{$antrian->petani_id}}</td>
-                            <td>{{$antrian->pabrik_id}}</td>
+                            <td>{{$antrian->id}}</td>
+                            <td>{{$antrian->nama}}</td>
+                            <td>{{$antrian->nama_pabrik}}</td>
                             <td>{{$antrian->tanggal}}</td>
                             <td>{{$antrian->jam}}</td>
                             <td>{{$antrian->nopol}}</td>

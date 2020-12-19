@@ -30,8 +30,13 @@ class AntrianController extends Controller
     }
 
     public function dataAntrianAdm(){
-        $data_antrian = Antrian::all();
-        return view('Admin.dataAntrian',['data_antrian'=> $data_antrian]);
+        // $data_antrian = Antrian::all();
+        $data_antrian = DB::table('antrian')
+        -> join('petani','petani.id', '=', 'antrian.petani_id')
+        -> join('pabrik','pabrik.id','=','antrian.pabrik_id')
+        -> select('antrian.NoAntrian','petani.nama','antrian.tanggal','antrian.jam','antrian.nopol','antrian.id','pabrik.nama_pabrik')
+        -> get();
+        return view('Admin.dataAntrian',compact('data_antrian'));
     }
 
     public function ambilAntrian(){
