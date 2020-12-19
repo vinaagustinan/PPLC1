@@ -19,7 +19,7 @@ class CreatePabrikTable extends Migration
             $table->string('nama');
             $table->string('no_hp');
             $table->string('alamat');
-            $table->enum('Aktif','Tidak Aktif')
+            $table->enum('status',['Aktif','Tidak Aktif']);
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

@@ -13,7 +13,10 @@ class AntrianController extends Controller
 {
 
     public function dataAntrian(){
-        $antrian = Antrian::all();
+        $antrian = DB::table('antrian')
+        -> join('pabrik','pabrik.id', '=', 'antrian.pabrik_id')
+        -> select('antrian.NoAntrian','pabrik.nama','antrian.tanggal','antrian.jam','antrian.nopol','antrian.id')
+        -> get();
         return view('petani.dataAntrian',['antrian'=> $antrian]);
     }
 
@@ -64,17 +67,22 @@ class AntrianController extends Controller
         $data_antrian = DB::table('antrian')
         -> join('petani','petani.id', '=', 'antrian.petani_id')
         -> select('antrian.NoAntrian','petani.nama','antrian.tanggal','antrian.jam','antrian.nopol','antrian.id')
-        -> get(); 
-        return view('pabrik.formAntrian',['data_antrian'=> $data_antrian]);
+        -> first(); 
+        // return view('pabrik.formAntrian',['data_antrian'=> $data_antrian]);
+        return view('pabrik.formAntrian', compact('data_antrian'));
     }
 
     public function saveJadwal(Request $request, $id){
-        $data_antrian = \App\Antrian::find($id);
-        $data_antrian->update($request->all());
+        $data_antrian = \App\Antrian::findOrFail($id);
+        $data_antrian->update([        
+        'NoAntrian' => $request->NoAntrian,
+        'nama' => $request->nama,
+        'tangal' => $request->tanggal,
+        'jam' => $request->jam,
+        'nopol' => $request->nopol,
+        ]);
         
-
           $data_antrian = new \App\Rendemen;
-      
           $data_antrian->id_antrian = $request->id_antrian;
           $data_antrian->save();
   

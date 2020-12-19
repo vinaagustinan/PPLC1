@@ -77,7 +77,7 @@ class RendemenController extends Controller
     //Halaman Petani
     public function dataRendemenPetani(){
       // $data_rendemen = Rendemen::where('id',Auth::Petani()->id)->get();
-      $data_rendemen = Rendemen::where('id', auth::user()->Petani()->user_id)->get;
+      $data_rendemen = Rendemen::where('id_antrian', \auth::user()->id)->latest()->get;
       return view('petani.dataRendemen',['data_rendemen'=> $data_rendemen]);
     }
 

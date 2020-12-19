@@ -21,7 +21,7 @@
                             <option>Pilih Pabrik</option>
                             @foreach ($pabrik as $item)
                                 <option 
-                                    value="{{ $item->id }}">{{ $item->nama_pabrik }}
+                                    value="{{ $item->id }}">{{ $item->nama }}
                                 </option>
                             @endforeach
                             </option>

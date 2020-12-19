@@ -20,7 +20,7 @@
                             <th>No Antrian</th>
                             <th>Tanggal</th>
                             <th>Jam</th>
-                            <th>ID Pabrik</th>
+                            <th>Nama Pabrik</th>
                             <th>Nopol Truk</th>
                         </tr>
                     </thead>
@@ -30,7 +30,7 @@
                             <td>{{$antrian->NoAntrian}}</td>
                             <td>{{$antrian->tanggal}}</td>
                             <td>{{$antrian->jam}}</td>
-                            <td>{{$antrian->pabrik_id}}</td>
+                            <td>{{$antrian->nama}}</td>
                             <td>{{$antrian->nopol}}</td>
                             <td>
                             </td>
