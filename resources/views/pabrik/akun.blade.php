@@ -14,7 +14,7 @@
                 {{csrf_field()}}
                   <div class="form-group">
                     <label for="nama">Nama</label>
-                    <input type="text" class="form-control" name="nama_pabrik" id="nama" value="{{auth::user()->Pabrik->nama_pabrik}}" >
+                    <input type="text" class="form-control" name="nama_pabrik" id="nama" value="{{auth::user()->Pabrik->nama}}" >
                   </div>
                   <div class="form-group">
                     <label for="alamat">Alamat</label>

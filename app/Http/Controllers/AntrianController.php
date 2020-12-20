@@ -13,18 +13,24 @@ class AntrianController extends Controller
 {
 
     public function dataAntrian(){
+        $akun = auth::user()->Petani->id;
         $antrian = DB::table('antrian')
+        
         -> join('pabrik','pabrik.id', '=', 'antrian.pabrik_id')
-        -> select('antrian.NoAntrian','pabrik.nama','antrian.tanggal','antrian.jam','antrian.nopol','antrian.id')
+        -> select('antrian.NoAntrian','pabrik.nama','antrian.tanggal','antrian.jam','antrian.nopol','antrian.id','antrian.petani_id') 
+        -> where ('antrian.petani_id','=', $akun)
         -> get();
         return view('petani.dataAntrian',['antrian'=> $antrian]);
     }
 
     public function dataAntrianPabrik(){
         // $data_antrian = Antrian::where('pabrik_id', Auth::user()->Pabrik()->id)->get();
+        $akun = auth::user()->Pabrik->id;
         $data_antrian = DB::table('antrian')
+
         -> join('petani','petani.id', '=', 'antrian.petani_id')
-        -> select('antrian.NoAntrian','petani.nama','antrian.tanggal','antrian.jam','antrian.nopol','antrian.id')
+        -> select('antrian.NoAntrian','petani.nama','antrian.tanggal','antrian.jam','antrian.nopol','antrian.id','antrian.pabrik_id')
+        -> where ('antrian.pabrik_id','=', $akun)
         -> get();
         return view('pabrik.dataAntrian',compact('data_antrian'));
     }
