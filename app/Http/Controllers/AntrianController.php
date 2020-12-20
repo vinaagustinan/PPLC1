@@ -73,7 +73,7 @@ class AntrianController extends Controller
         -> join('petani','petani.id', '=', 'antrian.petani_id')
         -> select('antrian.NoAntrian','petani.nama','antrian.tanggal','antrian.jam','antrian.nopol','antrian.id')
         -> first(); 
-        // return view('pabrik.formAntrian',['data_antrian'=> $data_antrian]);
+       
         return view('pabrik.formAntrian', compact('data_antrian'));
     }
 
@@ -82,7 +82,7 @@ class AntrianController extends Controller
         $data_antrian->update([        
         'NoAntrian' => $request->NoAntrian,
         'nama' => $request->nama,
-        'tangal' => $request->tanggal,
+        'tanggal' => $request->tanggal,
         'jam' => $request->jam,
         'nopol' => $request->nopol,
         ]);
@@ -90,11 +90,8 @@ class AntrianController extends Controller
         $rendemen = new \App\Rendemen;
         $insertedId = $data_antrian->id;
         $rendemen->id_antrian = $insertedId;
-        //   $data_antrian = new \App\Rendemen;
-        //   $data_antrian->id_antrian = $request->id_antrian;
         $rendemen->save();
-  
 
-          return redirect ('/petaniAntrian', compact('data_antrian'));
+        return redirect()->route('antrian');
     }
 }

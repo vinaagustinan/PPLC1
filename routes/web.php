@@ -71,9 +71,9 @@ Route::group(['middleware' => ['auth','CekAktor:Pabrik']],function(){
     Route::post('/pabrikRendemen/{id}/update', 'RendemenController@updatedataRendemen');
 
     //data Antrian
-    Route::get('/pabrikAntrian', 'AntrianController@dataAntrianPabrik');  
+    Route::get('/pabrikAntrian', 'AntrianController@dataAntrianPabrik')->name('antrian');  
     Route::get('/pabrikAntrian/{id}/edit', 'AntrianController@inputJadwal');
-    Route::post('/pabrikAntrian/{id}/update', 'AntrianController@saveJadwal');
+    Route::post('/pabrikAntrian/{id}/update', 'AntrianController@saveJadwal')->name('savejadwal');
 
 
     Route::get('/ubahPassPabrik', 'PabrikController@change');

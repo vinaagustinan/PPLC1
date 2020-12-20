@@ -18,7 +18,7 @@ class CreateAntrianTable extends Migration
             $table->bigInteger('petani_id')->unsigned()->index();
             $table->bigInteger('pabrik_id')->unsigned()->index();
             $table->bigInteger('NoAntrian')->nullable();
-            $table->date('tanggal')->nullable();
+            $table->date('tanggal')->format('dd, mm, YY')->nullable();
             $table->time('jam')->nullable();
             $table->string('nopol');
             $table->foreign('petani_id')->references('id')->on('petani');
