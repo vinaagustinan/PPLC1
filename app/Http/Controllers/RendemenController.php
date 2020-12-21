@@ -7,14 +7,23 @@ use Illuminate\Support\Facades\Auth;
 use App\Petani;
 use App\User;
 use App\Rendemen;
+use DB;
 
 
 class RendemenController extends Controller
 {
   //Halaman Pabrik
     public function dataRendemen(){
-        $data_Rendemen = \App\Rendemen::all(); //mengambil semua data pada database
-        return view('pabrik.dataRendemen',['data_Rendemen'=> $data_Rendemen]);
+        // $data_Rendemen = \App\Rendemen::all(); //mengambil semua data pada database
+        $akun = auth::user()->Pabrik->id;
+        $data_rendemen = DB::table('rendemen')
+        -> join('antrian','antrian.id', '=', 'rendemen.id_antrian')
+        -> select('rendemen.id_antrian','rendemen.BeratTebu','rendemen.NPP','rendemen.KNT','rendemen.PSHK','rendemen.WR','rendemen.HPB',
+        'rendemen.hargaGiling','rendemen.rendemenSementara','rendemen.Biaya','antrian.pabrik_id')
+        -> where ('antrian.pabrik_id','=', $akun)
+        -> get();
+      
+        return view('pabrik.dataRendemen',['data_rendemen'=> $data_rendemen]);
     }
 
     public function tambahdataRendemen(){
@@ -77,12 +86,12 @@ class RendemenController extends Controller
     //Halaman Petani
     public function dataRendemenPetani(){
       // $data_rendemen = Rendemen::where('id',Auth::Petani()->id)->get();
-      $akun = auth::user()->Pabrik->id;
+      $akun = auth::user()->Petani->id;
       $data_rendemen = DB::table('rendemen')
-      -> join('antrian','antrian.id', '=', 'rendemen.antrian_id')
-      -> select('antrian.pabrik_id','rendemen.BeratTebu','rendemen.NPP','rendemen.KNT','rendemen.PSHK','rendemen.WR',
-      'rendemen.hargaGiling','rendemen.rendemenSementara','rendemen.Biaya','antrian.pabrik_id')
-      -> where ('rendemen.antrian_id','=', $akun)
+      -> join('antrian','antrian.id', '=', 'rendemen.id_antrian')
+      -> select('rendemen.id_antrian','rendemen.BeratTebu','rendemen.NPP','rendemen.KNT','rendemen.PSHK','rendemen.WR',
+      'rendemen.hargaGiling','rendemen.rendemenSementara','rendemen.Biaya','antrian.petani_id')
+      -> where ('antrian.petani_id','=', $akun)
       -> get();
       return view('petani.dataRendemen',['data_rendemen'=> $data_rendemen]);
     }

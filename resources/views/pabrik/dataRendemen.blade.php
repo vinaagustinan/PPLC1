@@ -34,7 +34,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($data_Rendemen as $rendemen)
+                    @foreach($data_rendemen as $rendemen)
                         <tr class="tr-shadow">
                             <td>{{$rendemen->id_antrian}}</td>
                             <td>{{$rendemen->BeratTebu}}</td>
@@ -47,7 +47,7 @@
                             <td>Rp{{$rendemen->Biaya}}</td>
                             <td>
                                 <div class="table-data-feature">
-                                    <a href="/pabrikRendemen/{{$rendemen->id}}/edit" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <a href="/pabrikRendemen/{{$rendemen->id_antrian}}/edit" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                         <i class="zmdi zmdi-edit"></i>
                                     </a>
                                 </div>

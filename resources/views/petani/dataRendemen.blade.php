@@ -31,7 +31,7 @@
                                 <td>Rp{{$rendemen->Biaya}}</td>
                                 <td>
                                     <div class="table-data-feature">
-                                        <a href="/petaniRendemen/{{$rendemen->id}}/rincian" class="item" data-toggle="tooltip" data-placement="top" title="Rincian">
+                                        <a href="/petaniRendemen/{{$rendemen->id_antrian}}/rincian" class="item" data-toggle="tooltip" data-placement="top" title="Rincian">
                                             <i class="zmdi zmdi-more"></i>
                                         </a>
                                     </div>
